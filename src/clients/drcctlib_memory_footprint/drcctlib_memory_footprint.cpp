@@ -55,7 +55,7 @@ InstrumentPerInsCache(void *drcontext, context_handle_t ctxt_hndl, int32_t mem_r
 
     for (mem_ref_t* mem_ref = (mem_ref_t*) dat->buf_base; mem_ref < buf_ptr; ++mem_ref)
     {
-        std::cout << (unsigned int) mem_ref->addr;
+        std::cout << mem_ref->addr;
         std::cout << std::endl;
     }
 }
