@@ -52,35 +52,24 @@ InstrumentPerInsCache(void *drcontext, context_handle_t ctxt_hndl, int32_t mem_r
 {
     std::cout << "instrument crap start" << std::endl;
     per_thread_t* dat = (per_thread_t*) data;
-    mem_ref_t* buf_ptr = dat->buf_base;
 
     context_t* full_cct = drcctlib_get_full_cct(ctxt_hndl, 100);
-    for (context_t* ptr = full_cct; ptr; ++ptr)
+    std::cout << "name = " << full_cct->func_name << std::endl;
+    for (context_t* ptr = full_cct; ptr + 1; ++ptr)
         std::cout << "-->" << ptr->func_name;
     std::cout << std::endl;
     
-    std::cout << "addr = " << buf_ptr->addr << std::endl;
     std::cout << "mem_ref done" << std::endl;
 
-    try {
-	std::cout << "Start: " << (mem_ref_t*) dat->buf_base->addr << std::endl;
-    } catch (...) {
-	std::cout << "Failed at pt 1\n" << std::endl;
-    }
-
-    try {
-	std::cout << "End: " << (mem_ref_t*) dat->buf_base->addr << std::endl;
-    } catch (...) {
-	std::cout << "Failed at pt 2\n" << std::endl;
-    }
-
-
-    int i = 0;
-    for (mem_ref_t* mem_ref = (mem_ref_t*) dat->buf_base; mem_ref < buf_ptr; ++mem_ref)
-    {
-	std::cout << "iter " << ++i << std::endl;
-        std::cout << mem_ref->addr;
-        std::cout << std::endl;
+    if (dat) {
+        mem_ref_t* buf_ptr = dat->buf_base;
+        if (buf_ptr) {
+            std::cout << "addr = " << buf_ptr->addr << std::endl;
+        } else {
+            std::cout << "buf_base is null" << std::endl;
+        }
+    } else {
+        std::cout << "dat is null\n" << std::endl;
     }
 }
 
