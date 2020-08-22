@@ -50,12 +50,11 @@ static inline void
 InstrumentPerInsCache(void *drcontext, context_handle_t ctxt_hndl, int32_t mem_ref_num,
                       mem_ref_msg_t *mem_ref_start, void *data)
 {
-    std::cout << "instrument crap start" << std::endl;
     per_thread_t* dat = (per_thread_t*) data;
 
     context_t* full_cct = drcctlib_get_full_cct(ctxt_hndl, 100);
-    std::cout << "name = " << full_cct->func_name << std::endl;
-    for (context_t* ptr = full_cct; ptr + 1; ++ptr)
+    std::cout << "Context: ";
+    for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt )
         std::cout << "-->" << ptr->func_name;
     std::cout << std::endl;
     
