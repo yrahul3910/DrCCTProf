@@ -50,8 +50,17 @@ static inline void
 InstrumentPerInsCache(void *drcontext, context_handle_t ctxt_hndl, int32_t mem_ref_num,
                       mem_ref_msg_t *mem_ref_start, void *data)
 {
+    std::cout << "instrument crap start" << std::endl;
     per_thread_t* dat = (per_thread_t*) data;
-    mem_ref_t* buf_ptr = *(mem_ref_t **)(byte*) dat->seg_base;
+    mem_ref_t* buf_ptr = dat->buf_base;
+
+    context_t* full_cct = drcctlib_get_full_cct(ctxt_hndl, 100);
+    for (context_t* ptr = full_cct; ptr; ++ptr)
+        std::cout << "-->" << ptr->func_name;
+    std::cout << std::endl;
+    
+    std::cout << "addr = " << buf_ptr->addr << std::endl;
+    std::cout << "mem_ref done" << std::endl;
 
     try {
 	std::cout << "Start: " << (mem_ref_t*) dat->buf_base->addr << std::endl;
@@ -116,9 +125,11 @@ extern "C" {
 DR_EXPORT void
 dr_client_main(client_id_t id, int argc, const char *argv[])
 {
+    std::cout << "start" << std::endl;
     dr_set_client_name("DynamoRIO Client 'drcctlib_memory_footprint'",
                        "http://dynamorio.org/issues");
     ClientInit(argc, argv);
+    std::cout << "init done" << std::endl;
 
     drcctlib_init_ex(DRCCTLIB_FILTER_MEM_ACCESS_INSTR, INVALID_FILE, NULL, NULL,
                      InstrumentPerBBCache, DRCCTLIB_CACHE_MODE);
