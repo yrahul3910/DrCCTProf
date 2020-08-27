@@ -26,7 +26,7 @@ using namespace std;
     DRCCTLIB_PRINTF_TEMPLATE("memory_only", format, ##args)
 #define DRCCTLIB_EXIT_PROCESS(format, args...) \
     DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_only", format, ##args)
-
+#define MEM_BUF_SIZE (sizeof(mem_ref_t) * 4096)
 static int tls_idx;
 static uint tls_offs;
 
@@ -59,17 +59,35 @@ InstrumentPerInsCache(void *drcontext, context_handle_t ctxt_hndl, int32_t mem_r
     std::cout << std::endl;
     
     std::cout << "mem_ref done" << std::endl;
+    dat->buf_base = (mem_ref_t*)dr_raw_mem_alloc(MEM_BUF_SIZE, DR_MEMPROT_READ | DR_MEMPROT_WRITE, NULL);
 
     if (dat) {
         mem_ref_t* buf_ptr = dat->buf_base;
         if (buf_ptr) {
-            std::cout << "addr = " << buf_ptr->addr << std::endl;
         } else {
             std::cout << "buf_base is null" << std::endl;
         }
     } else {
         std::cout << "dat is null\n" << std::endl;
     }
+
+    instr_t instr;
+    instr_init(drcontext, &instr);
+    instr_reset(drcontext, &instr);
+
+    dr_mcontext_t mcontext;
+    mcontext.size = sizeof(dr_mcontext_t);
+    mcontext.flags = DR_MC_ALL;
+
+    if (dr_get_mcontext(drcontext, &mcontext)) {
+		std::cout << "got mcontext" << std::endl;
+		int index = 0;
+		app_pc addr;
+		while(instr_compute_address(&instr, &mcontext))
+			std::cout << "got addr " << addr << std::endl;
+	}
+
+	instr_free(drcontext, &instr);
 }
 
 static inline void
