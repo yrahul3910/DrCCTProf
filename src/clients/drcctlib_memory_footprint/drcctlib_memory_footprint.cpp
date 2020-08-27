@@ -58,9 +58,11 @@ typedef struct _per_thread_t {
 
 // client want to do
 void
-DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl)
+DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, int32_t size, int32_t* pc)
 {
     // use {cur_ctxt_hndl}
+	std::printf("Memory reference %p of size %u\n", pc, size);
+	std::fflush(stdout);
     context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 100);
     std::cout << "Context: ";
     for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt )
@@ -70,39 +72,11 @@ DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl)
 
 // dr clean call
 void
-InsertCleancall()
+InsertCleancall(int32_t slot, int32_t size, int32_t* pc)
 {
-    void *drcontext = dr_get_current_drcontext();
-    per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
-    DoWhatClientWantTodo(drcontext, pt->cur_ctxt_hndl);
-}
-
-// insert
-static void
-InstrumentIns(void *drcontext, instrlist_t *bb, instr_t *instr, int32_t slot)
-{
-    reg_id_t reg_ctxt_hndl, reg_temp;
-    if (drreg_reserve_register(drcontext, bb, instr, NULL, &reg_ctxt_hndl) !=
-            DRREG_SUCCESS ||
-        drreg_reserve_register(drcontext, bb, instr, NULL, &reg_temp) != DRREG_SUCCESS) {
-        DRCCTLIB_EXIT_PROCESS(
-            "InstrumentInsCallback drreg_reserve_register != DRREG_SUCCESS");
-    }
-    drcctlib_get_context_handle_in_reg(drcontext, bb, instr, slot, reg_ctxt_hndl,
-                                       reg_temp);
-    drmgr_insert_read_tls_field(drcontext, tls_idx, bb, instr, reg_temp);
-
-    MINSERT(bb, instr,
-            XINST_CREATE_store(drcontext,
-                               OPND_CREATE_CTXT_HNDL_MEM(
-                                   reg_temp, offsetof(per_thread_t, cur_ctxt_hndl)),
-                               opnd_create_reg(reg_ctxt_hndl)));
-
-    if (drreg_unreserve_register(drcontext, bb, instr, reg_ctxt_hndl) != DRREG_SUCCESS ||
-        drreg_unreserve_register(drcontext, bb, instr, reg_temp) != DRREG_SUCCESS) {
-        DRCCTLIB_EXIT_PROCESS(
-            "InstrumentInsCallback drreg_unreserve_register != DRREG_SUCCESS");
-    }
+	void *drcontext = dr_get_current_drcontext();
+    context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
+    DoWhatClientWantTodo(drcontext, cur_ctxt_hndl, size, pc);
 }
 
 // analysis
@@ -120,20 +94,9 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
     if (dr_get_mcontext(drcontext, &ctxt)) {
 	    app_pc pc = instr_compute_address(instr, &ctxt);
 	    unsigned int size = instr_memory_reference_size(instr);
-	    std::printf("Memory reference %p of size %u\n", pc, size);
-
-    	    per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
-	    context_handle_t cur_ctxt_hndl = pt->cur_ctxt_hndl;
-    	    context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 100);
-    	    std::cout << "Context: ";
-    	    for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt )
-        	std::cout << "-->" << ptr->func_name;
-    	    std::cout << std::endl;
-
-	    std::fflush(stdout);
+            dr_insert_clean_call(drcontext, bb, instr, (void *)InsertCleancall, false, 3, OPND_CREATE_INT32(slot), OPND_CREATE_INT32(size), OPND_CREATE_INTPTR(pc));
     }
 
-    InstrumentIns(drcontext, bb, instr, slot);
 }
 
 static void
