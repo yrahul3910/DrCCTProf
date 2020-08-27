@@ -1,4 +1,7 @@
 #include <iostream>
+#include <cstdio>
+#include <iomanip>
+#include <typeinfo>
 #include <string.h>
 #include <sstream>
 #include <algorithm>
@@ -17,100 +20,137 @@
 #include "drreg.h"
 #include "drutil.h"
 #include "drcctlib.h"
-#include <stdio.h>
-#include <stddef.h> /* for offsetof */
 
 using namespace std;
 
 #define DRCCTLIB_PRINTF(format, args...) \
-    DRCCTLIB_PRINTF_TEMPLATE("memory_only", format, ##args)
+    DRCCTLIB_PRINTF_TEMPLATE("memory_only_clean_call", format, ##args)
 #define DRCCTLIB_EXIT_PROCESS(format, args...) \
-    DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_only", format, ##args)
-#define MEM_BUF_SIZE (sizeof(mem_ref_t) * 4096)
+    DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_only_clean_call", format, ##args)
+
 static int tls_idx;
-static uint tls_offs;
 
-typedef struct _mem_ref_t {
-    ushort type; /* r(0), w(1), or opcode (assuming 0/1 are invalid opcode) */
-    ushort size; /* mem ref size or instr length */
-    app_pc addr; /* mem ref addr or instr pc */
-} mem_ref_t;
+#define MINSERT instrlist_meta_preinsert
 
+#ifdef ARM_CCTLIB
+#    define OPND_CREATE_CCT_INT OPND_CREATE_INT
+#else
+#    ifdef CCTLIB_64
+#        define OPND_CREATE_CCT_INT OPND_CREATE_INT64
+#    else
+#        define OPND_CREATE_CCT_INT OPND_CREATE_INT32
+#    endif
+#endif
 
-typedef struct {
-    byte *seg_base;
-    mem_ref_t *buf_base;
-    file_t log;
-    FILE *logf;
-    uint64 num_refs;
+#ifdef CCTLIB_64
+#    define OPND_CREATE_CTXT_HNDL_MEM OPND_CREATE_MEM64
+#else
+#    define OPND_CREATE_CTXT_HNDL_MEM OPND_CREATE_MEM32
+#endif
+
+#define OPND_CREATE_MEM_IDX_MEM OPND_CREATE_MEM64
+
+typedef struct _per_thread_t {
+    aligned_ctxt_hndl_t cur_ctxt_hndl;
 } per_thread_t;
 
-// dr clean call per ins cache
-static inline void
-InstrumentPerInsCache(void *drcontext, context_handle_t ctxt_hndl, int32_t mem_ref_num,
-                      mem_ref_msg_t *mem_ref_start, void *data)
-{
-    per_thread_t* dat = (per_thread_t*) data;
+#define TLS_MEM_REF_BUFF_SIZE 100
 
-    context_t* full_cct = drcctlib_get_full_cct(ctxt_hndl, 100);
+// client want to do
+void
+DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl)
+{
+    // use {cur_ctxt_hndl}
+    context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 100);
     std::cout << "Context: ";
     for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt )
         std::cout << "-->" << ptr->func_name;
     std::cout << std::endl;
-    
-    std::cout << "mem_ref done" << std::endl;
-    dat->buf_base = (mem_ref_t*)dr_raw_mem_alloc(MEM_BUF_SIZE, DR_MEMPROT_READ | DR_MEMPROT_WRITE, NULL);
-
-    if (dat) {
-        mem_ref_t* buf_ptr = dat->buf_base;
-        if (buf_ptr) {
-        } else {
-            std::cout << "buf_base is null" << std::endl;
-        }
-    } else {
-        std::cout << "dat is null\n" << std::endl;
-    }
-
-    instr_t instr;
-    instr_init(drcontext, &instr);
-    instr_reset(drcontext, &instr);
-
-    dr_mcontext_t mcontext;
-    mcontext.size = sizeof(dr_mcontext_t);
-    mcontext.flags = DR_MC_ALL;
-
-    if (dr_get_mcontext(drcontext, &mcontext)) {
-		std::cout << "got mcontext" << std::endl;
-		int index = 0;
-		app_pc addr;
-		while(instr_compute_address(&instr, &mcontext))
-			std::cout << "got addr " << addr << std::endl;
-	}
-
-	instr_free(drcontext, &instr);
 }
 
-static inline void
-InstrumentPerBBCache(void *drcontext, context_handle_t ctxt_hndl, int32_t slot_num,
-                     int32_t mem_ref_num, mem_ref_msg_t *mem_ref_start, void **data)
-{    
-    int32_t temp_index = 0;
-    for (int32_t i = 0; i < slot_num; i++) {
-        int32_t ins_ref_number = 0;
-        mem_ref_msg_t *ins_cache_mem_start = NULL;
-        for (; temp_index < mem_ref_num; temp_index++) {
-            if (mem_ref_start[temp_index].slot == i) {
-                if (ins_cache_mem_start == NULL) {
-                    ins_cache_mem_start = mem_ref_start + temp_index;
-                }
-                ins_ref_number++;
-            } else if (mem_ref_start[temp_index].slot > i) {
-                break;
-            }
-        }
-        InstrumentPerInsCache(drcontext, ctxt_hndl + i, ins_ref_number,
-                              ins_cache_mem_start, data);
+// dr clean call
+void
+InsertCleancall()
+{
+    void *drcontext = dr_get_current_drcontext();
+    per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
+    DoWhatClientWantTodo(drcontext, pt->cur_ctxt_hndl);
+}
+
+// insert
+static void
+InstrumentIns(void *drcontext, instrlist_t *bb, instr_t *instr, int32_t slot)
+{
+    reg_id_t reg_ctxt_hndl, reg_temp;
+    if (drreg_reserve_register(drcontext, bb, instr, NULL, &reg_ctxt_hndl) !=
+            DRREG_SUCCESS ||
+        drreg_reserve_register(drcontext, bb, instr, NULL, &reg_temp) != DRREG_SUCCESS) {
+        DRCCTLIB_EXIT_PROCESS(
+            "InstrumentInsCallback drreg_reserve_register != DRREG_SUCCESS");
     }
+    drcctlib_get_context_handle_in_reg(drcontext, bb, instr, slot, reg_ctxt_hndl,
+                                       reg_temp);
+    drmgr_insert_read_tls_field(drcontext, tls_idx, bb, instr, reg_temp);
+
+    MINSERT(bb, instr,
+            XINST_CREATE_store(drcontext,
+                               OPND_CREATE_CTXT_HNDL_MEM(
+                                   reg_temp, offsetof(per_thread_t, cur_ctxt_hndl)),
+                               opnd_create_reg(reg_ctxt_hndl)));
+
+    if (drreg_unreserve_register(drcontext, bb, instr, reg_ctxt_hndl) != DRREG_SUCCESS ||
+        drreg_unreserve_register(drcontext, bb, instr, reg_temp) != DRREG_SUCCESS) {
+        DRCCTLIB_EXIT_PROCESS(
+            "InstrumentInsCallback drreg_unreserve_register != DRREG_SUCCESS");
+    }
+}
+
+// analysis
+void
+InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
+{
+
+    instrlist_t *bb = instrument_msg->bb;
+    instr_t *instr = instrument_msg->instr;
+    int32_t slot = instrument_msg->slot;
+
+    dr_mcontext_t ctxt;
+    ctxt.size = sizeof(dr_mcontext_t);
+    ctxt.flags = DR_MC_ALL;
+    if (dr_get_mcontext(drcontext, &ctxt)) {
+	    app_pc pc = instr_compute_address(instr, &ctxt);
+	    unsigned int size = instr_memory_reference_size(instr);
+	    std::printf("Memory reference %p of size %u\n", pc, size);
+
+    	    per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
+	    context_handle_t cur_ctxt_hndl = pt->cur_ctxt_hndl;
+    	    context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 100);
+    	    std::cout << "Context: ";
+    	    for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt )
+        	std::cout << "-->" << ptr->func_name;
+    	    std::cout << std::endl;
+
+	    std::fflush(stdout);
+    }
+
+    InstrumentIns(drcontext, bb, instr, slot);
+}
+
+static void
+ClientThreadStart(void *drcontext)
+{
+    per_thread_t *pt = (per_thread_t *)dr_thread_alloc(drcontext, sizeof(per_thread_t));
+    if (pt == NULL) {
+        DRCCTLIB_EXIT_PROCESS("pt == NULL");
+    }
+    drmgr_set_tls_field(drcontext, tls_idx, (void *)pt);
+}
+
+static void
+ClientThreadEnd(void *drcontext)
+{
+    per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
+    dr_thread_free(drcontext, pt, sizeof(per_thread_t));
 }
 
 static void
@@ -122,6 +162,18 @@ static void
 ClientExit(void)
 {
     drcctlib_exit();
+
+    if (!drmgr_unregister_thread_init_event(ClientThreadStart) ||
+        !drmgr_unregister_thread_exit_event(ClientThreadEnd) ||
+        !drmgr_unregister_tls_field(tls_idx)) {
+        DRCCTLIB_PRINTF(
+            "ERROR: drcctlib_memory_only_clean_call failed to unregister in ClientExit");
+    }
+    drmgr_exit();
+    if (drreg_exit() != DRREG_SUCCESS) {
+        DRCCTLIB_PRINTF("failed to exit drreg");
+    }
+    drutil_exit();
 }
 
 #ifdef __cplusplus
@@ -131,14 +183,33 @@ extern "C" {
 DR_EXPORT void
 dr_client_main(client_id_t id, int argc, const char *argv[])
 {
-    std::cout << "start" << std::endl;
-    dr_set_client_name("DynamoRIO Client 'drcctlib_memory_footprint'",
+    dr_set_client_name("DynamoRIO Client 'drcctlib_memory_only_clean_call'",
                        "http://dynamorio.org/issues");
     ClientInit(argc, argv);
-    std::cout << "init done" << std::endl;
 
-    drcctlib_init_ex(DRCCTLIB_FILTER_MEM_ACCESS_INSTR, INVALID_FILE, NULL, NULL,
-                     InstrumentPerBBCache, DRCCTLIB_CACHE_MODE);
+    if (!drmgr_init()) {
+        DRCCTLIB_EXIT_PROCESS(
+            "ERROR: drcctlib_memory_only_clean_call unable to initialize drmgr");
+    }
+    drreg_options_t ops = { sizeof(ops), 4 /*max slots needed*/, false };
+    if (drreg_init(&ops) != DRREG_SUCCESS) {
+        DRCCTLIB_EXIT_PROCESS(
+            "ERROR: drcctlib_memory_only_clean_call unable to initialize drreg");
+    }
+    if (!drutil_init()) {
+        DRCCTLIB_EXIT_PROCESS(
+            "ERROR: drcctlib_memory_only_clean_call unable to initialize drutil");
+    }
+    drmgr_register_thread_init_event(ClientThreadStart);
+    drmgr_register_thread_exit_event(ClientThreadEnd);
+
+    tls_idx = drmgr_register_tls_field();
+    if (tls_idx == -1) {
+        DRCCTLIB_EXIT_PROCESS(
+            "ERROR: drcctlib_memory_only_clean_call drmgr_register_tls_field fail");
+    }
+    drcctlib_init_ex(DRCCTLIB_FILTER_MEM_ACCESS_INSTR, INVALID_FILE,
+                     InstrumentInsCallback, NULL, NULL, DRCCTLIB_DEFAULT);
     dr_register_exit_event(ClientExit);
 }
 

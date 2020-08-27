@@ -23,7 +23,7 @@ if [ "$DEBUG_MODE" == "true" ] ; then
 fi
 
 echo -e "Prepare build directory and log directory .."
-rm -rf $BUILD_PATH
+#rm -rf $BUILD_PATH
 mkdir $BUILD_PATH
 if [ ! -d $LOG_PATH ]; then
     mkdir $LOG_PATH
