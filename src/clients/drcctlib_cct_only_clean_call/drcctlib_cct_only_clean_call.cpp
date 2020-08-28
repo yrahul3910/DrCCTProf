@@ -1,8 +1,12 @@
+/* 
+ *  Copyright (c) 2020 Xuhpclab. All rights reserved.
+ *  Licensed under the MIT License.
+ *  See LICENSE file for more information.
+ */
+
 #include <iterator>
 #include "dr_api.h"
 #include "drcctlib.h"
-
-using namespace std;
 
 #define DRCCTLIB_PRINTF(format, args...) \
     DRCCTLIB_PRINTF_TEMPLATE("cct_only_no_cache", format, ##args)

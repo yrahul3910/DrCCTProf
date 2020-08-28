@@ -1,20 +1,11 @@
-#include <iostream>
-#include <string.h>
-#include <sstream>
-#include <algorithm>
-#include <iterator>
-#include <unistd.h>
-#include <vector>
-
-#include <sys/resource.h>
-#include <sys/mman.h>
+/* 
+ *  Copyright (c) 2020 Xuhpclab. All rights reserved.
+ *  Licensed under the MIT License.
+ *  See LICENSE file for more information.
+ */
 
 #include "dr_api.h"
-#include "drmgr.h"
-#include "drreg.h"
 #include "drcctlib.h"
-
-using namespace std;
 
 #define DRCCTLIB_PRINTF(format, args...) \
     DRCCTLIB_PRINTF_TEMPLATE("instr_statistics", format, ##args)
@@ -26,7 +17,6 @@ using namespace std;
 
 uint64_t *gloabl_hndl_call_num;
 static file_t gTraceFile;
-static int tls_idx;
 
 // dr clean call per ins cache
 static inline void
@@ -84,28 +74,19 @@ ClientInit(int argc, const char *argv[])
 #else
     char name[MAXIMUM_PATH] = "x86.drcctlib_instr_statistics.out.";
 #endif
-    char *envPath = getenv("DR_CCTLIB_CLIENT_OUTPUT_FILE");
-
-    if (envPath) {
-        // assumes max of MAXIMUM_PATH
-        strcpy(name, envPath);
-    }
 
     gethostname(name + strlen(name), MAXIMUM_PATH - strlen(name));
     pid_t pid = getpid();
     sprintf(name + strlen(name), "%d", pid);
-    cerr << "Creating log file at:" << name << endl;
+    DRCCTLIB_PRINTF("Creating log file at:%s", name);
 
     gTraceFile = dr_open_file(name, DR_FILE_WRITE_OVERWRITE | DR_FILE_ALLOW_LARGE);
-
     DR_ASSERT(gTraceFile != INVALID_FILE);
     // print the arguments passed
     dr_fprintf(gTraceFile, "\n");
-
     for (int i = 0; i < argc; i++) {
         dr_fprintf(gTraceFile, "%d %s ", i, argv[i]);
     }
-
     dr_fprintf(gTraceFile, "\n");
 
     InitGlobalBuff();
@@ -145,7 +126,6 @@ ClientExit(void)
             output_list[min_idx].handle = i;
         }
     }
-
     output_format_t temp;
     for (int32_t i = 0; i < TOP_REACH_NUM_SHOW; i++) {
         for (int32_t j = i; j < TOP_REACH_NUM_SHOW; j++) {
@@ -177,7 +157,6 @@ ClientExit(void)
     dr_global_free(output_list, TOP_REACH_NUM_SHOW * sizeof(output_format_t));
     FreeGlobalBuff();
     drcctlib_exit();
-
     dr_close_file(gTraceFile);
 }
 

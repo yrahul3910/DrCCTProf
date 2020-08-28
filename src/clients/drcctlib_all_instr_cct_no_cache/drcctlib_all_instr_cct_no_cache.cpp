@@ -1,18 +1,11 @@
-#include <iostream>
-#include <string.h>
-#include <sstream>
-#include <algorithm>
-#include <iterator>
-#include <unistd.h>
-#include <vector>
-
-#include <sys/resource.h>
-#include <sys/mman.h>
+/* 
+ *  Copyright (c) 2020 Xuhpclab. All rights reserved.
+ *  Licensed under the MIT License.
+ *  See LICENSE file for more information.
+ */
 
 #include "dr_api.h"
 #include "drcctlib.h"
-
-using namespace std;
 
 #define DRCCTLIB_PRINTF(format, args...) \
     DRCCTLIB_PRINTF_TEMPLATE("all_instr_cct_no_cache", format, ##args)

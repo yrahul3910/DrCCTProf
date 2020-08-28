@@ -1,24 +1,15 @@
-#include <iostream>
-#include <string.h>
-#include <sstream>
-#include <algorithm>
-#include <climits>
-#include <iterator>
-#include <unistd.h>
-#include <vector>
-#include <map>
+/* 
+ *  Copyright (c) 2020 Xuhpclab. All rights reserved.
+ *  Licensed under the MIT License.
+ *  See LICENSE file for more information.
+ */
 
-#include <sys/resource.h>
-#include <sys/mman.h>
+#include <cstddef>
 
 #include "dr_api.h"
 #include "drmgr.h"
-#include "drsyms.h"
 #include "drreg.h"
-#include "drutil.h"
 #include "drcctlib.h"
-
-using namespace std;
 
 #define DRCCTLIB_PRINTF(format, args...) \
     DRCCTLIB_PRINTF_TEMPLATE("cct_only_no_cache", format, ##args)
@@ -145,7 +136,6 @@ ClientExit(void)
     if (drreg_exit() != DRREG_SUCCESS) {
         DRCCTLIB_PRINTF("failed to exit drreg");
     }
-    drutil_exit();
 }
 
 #ifdef __cplusplus
@@ -167,10 +157,6 @@ dr_client_main(client_id_t id, int argc, const char *argv[])
     if (drreg_init(&ops) != DRREG_SUCCESS) {
         DRCCTLIB_EXIT_PROCESS(
             "ERROR: drcctlib_cct_only_no_cache unable to initialize drreg");
-    }
-    if (!drutil_init()) {
-        DRCCTLIB_EXIT_PROCESS(
-            "ERROR: drcctlib_cct_only_no_cache unable to initialize drutil");
     }
     drmgr_register_thread_init_event(ClientThreadStart);
     drmgr_register_thread_exit_event(ClientThreadEnd);

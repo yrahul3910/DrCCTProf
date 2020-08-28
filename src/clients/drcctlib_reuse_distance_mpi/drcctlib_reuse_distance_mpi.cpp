@@ -1,21 +1,13 @@
-#include <iostream>
-#include <string.h>
-#include <sstream>
-#include <algorithm>
-#include <climits>
-#include <iterator>
-#include <unistd.h>
-#include <vector>
-#include <map>
+/* 
+ *  Copyright (c) 2020 Xuhpclab. All rights reserved.
+ *  Licensed under the MIT License.
+ *  See LICENSE file for more information.
+ */
 
-#include <sys/resource.h>
-#include <sys/mman.h>
+#include <map>
 
 #include "dr_api.h"
 #include "drmgr.h"
-#include "drsyms.h"
-#include "drreg.h"
-#include "drutil.h"
 #include "drcctlib.h"
 #include "shadow_memory.h"
 

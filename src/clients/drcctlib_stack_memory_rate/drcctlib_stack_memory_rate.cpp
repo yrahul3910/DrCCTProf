@@ -1,25 +1,13 @@
-#include <iostream>
-#include <string.h>
-#include <sstream>
-#include <algorithm>
-#include <climits>
-#include <iterator>
-#include <unistd.h>
-#include <vector>
-#include <map>
-
-#include <sys/resource.h>
-#include <sys/mman.h>
+/* 
+ *  Copyright (c) 2020 Xuhpclab. All rights reserved.
+ *  Licensed under the MIT License.
+ *  See LICENSE file for more information.
+ */
 
 #include "dr_api.h"
 #include "drmgr.h"
-#include "drsyms.h"
-#include "drreg.h"
-#include "drutil.h"
 #include "drcctlib.h"
 #include "drcctlib_ext.h"
-
-using namespace std;
 
 #define DRCCTLIB_PRINTF(format, args...) \
     DRCCTLIB_PRINTF_TEMPLATE("stack_memory_rate", format, ##args)
@@ -145,10 +133,6 @@ ClientExit(void)
             "ERROR: drcctlib_stack_memory_rate failed to unregister in ClientExit");
     }
     drmgr_exit();
-    if (drreg_exit() != DRREG_SUCCESS) {
-        DRCCTLIB_PRINTF("failed to exit drreg");
-    }
-    drutil_exit();
 }
 
 #ifdef __cplusplus

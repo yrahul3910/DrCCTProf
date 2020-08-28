@@ -1,5 +1,13 @@
+/* 
+ *  Copyright (c) 2020 Xuhpclab. All rights reserved.
+ *  Licensed under the MIT License.
+ *  See LICENSE file for more information.
+ */
+
 #ifndef _DRCCTLIB_H_
 #define _DRCCTLIB_H_
+
+#include <cstdint>
 
 #include "dr_api.h"
 #include "drcctlib_global_share.h"
@@ -129,9 +137,7 @@ DR_EXPORT
 bool
 drcctlib_have_same_source_line(context_handle_t ctxt_hndl1, context_handle_t ctxt_hndl2);
 
-
 enum { UNKNOWN_OBJECT, STACK_OBJECT, DYNAMIC_OBJECT, STATIC_OBJECT };
-
 // The handle representing a data object
 typedef struct _data_handle_t {
     uint8_t object_type;
