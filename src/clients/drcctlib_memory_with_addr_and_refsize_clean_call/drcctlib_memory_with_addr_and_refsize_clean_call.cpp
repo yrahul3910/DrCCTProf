@@ -5,7 +5,8 @@
  */
 
 #include <cstddef>
-
+#include <cstdio>
+#include <iostream>
 #include "dr_api.h"
 #include "drmgr.h"
 #include "drreg.h"
@@ -52,6 +53,13 @@ void
 DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref)
 {
     // add online analysis here
+    std::printf("Memory reference %p of size %lu\n", ref->addr, ref->size);
+    std::fflush(stdout);
+    context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 100);
+    std::cout << "Context: ";
+    for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt )
+        std::cout << "-->" << ptr->func_name;
+    std::cout << std::endl;
     
 }
 // dr clean call
