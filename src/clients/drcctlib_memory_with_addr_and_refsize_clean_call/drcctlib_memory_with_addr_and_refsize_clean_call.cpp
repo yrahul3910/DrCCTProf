@@ -5,6 +5,7 @@
  */
 
 #include <cstddef>
+#include <map>
 #include <cstdio>
 #include <iostream>
 #include "dr_api.h"
@@ -48,6 +49,8 @@ typedef struct _per_thread_t {
 
 #define TLS_MEM_REF_BUFF_SIZE 100
 
+std::map<std::string, int> global;
+
 // client want to do
 void
 DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref)
@@ -56,10 +59,11 @@ DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t 
     std::printf("Memory reference %p of size %lu\n", ref->addr, ref->size);
     std::fflush(stdout);
     context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 100);
-    std::cout << "Context: ";
+    std::string context = "";
     for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt )
-        std::cout << "-->" << ptr->func_name;
+        context += std::string("-->") + std::string(ptr->func_name);
     std::cout << std::endl;
+    global[context] = ref->size;
     
 }
 // dr clean call
@@ -197,6 +201,10 @@ static void
 ClientExit(void)
 {
     // add output module here
+	for (std::map<std::string, int>::iterator it = global.begin(); it != global.end(); ++it)
+		std::cout << it->first << " = " << it->second << std::endl;	
+
+
     drcctlib_exit();
 
     if (!dr_raw_tls_cfree(tls_offs, INSTRACE_TLS_COUNT)) {
