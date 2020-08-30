@@ -16,6 +16,7 @@
 #include "drreg.h"
 #include "drutil.h"
 #include "drcctlib.h"
+#include "drcctlib_hpcviewer_format.h"
 
 #define DRCCTLIB_PRINTF(format, args...) \
     DRCCTLIB_PRINTF_TEMPLATE("memory_with_addr_and_refsize_clean_call", format, ##args)
@@ -190,6 +191,8 @@ ClientThreadEnd(void *drcontext)
     per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
     dr_global_free(pt->cur_buf_list, TLS_MEM_REF_BUFF_SIZE * sizeof(mem_ref_t));
     dr_thread_free(drcontext, pt, sizeof(per_thread_t));
+
+	write_thread_all_cct_hpcrun_format(drcontext);
 }
 
 static void
@@ -208,6 +211,7 @@ ClientExit(void)
 	}
 
     drcctlib_exit();
+	hpcrun_format_exit();
 
     if (!dr_raw_tls_cfree(tls_offs, INSTRACE_TLS_COUNT)) {
         DRCCTLIB_EXIT_PROCESS(
@@ -263,6 +267,7 @@ dr_client_main(client_id_t id, int argc, const char *argv[])
             "ERROR: drcctlib_memory_with_addr_and_refsize_clean_call dr_raw_tls_calloc fail");
     }
     drcctlib_init(DRCCTLIB_FILTER_MEM_ACCESS_INSTR, INVALID_FILE, InstrumentInsCallback, false);
+	hpcrun_format_init(dr_get_application_name(), true);
     dr_register_exit_event(ClientExit);
 }
 
