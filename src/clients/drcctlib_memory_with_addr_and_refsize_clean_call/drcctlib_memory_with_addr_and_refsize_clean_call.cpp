@@ -8,6 +8,7 @@
 #include <map>
 #include <string>
 #include <algorithm>
+#include <vector>
 #include <set>
 #include <cstdio>
 #include <iostream>
@@ -16,14 +17,13 @@
 #include "drreg.h"
 #include "drutil.h"
 #include "drcctlib.h"
-#include "drcctlib_hpcviewer_format.h"
+//#include "drcctlib_hpcviewer_format.h"
 
 #define DRCCTLIB_PRINTF(format, args...) \
     DRCCTLIB_PRINTF_TEMPLATE("memory_with_addr_and_refsize_clean_call", format, ##args)
 #define DRCCTLIB_EXIT_PROCESS(format, args...)                                           \
     DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_with_addr_and_refsize_clean_call", format, \
                                           ##args)
-
 static int tls_idx;
 
 enum {
@@ -53,11 +53,11 @@ typedef struct _per_thread_t {
 
 #define TLS_MEM_REF_BUFF_SIZE 100
 
-std::map<std::string, std::set<app_pc>> global;
+std::map<std::string, std::pair<std::set<app_pc>, std::vector<std::string>>> global;
 
 // client want to do
 void
-DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref)
+DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref, instr_t* instr)
 {
     // add online analysis here
     context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 0);
@@ -66,18 +66,20 @@ DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t 
 		context += std::string("-->") + std::string(ptr->func_name);
 	}
 	for (app_pc start = ref->addr; start < ref->addr + ref->size; ++start)
-		global[context].insert(start);
+		global[context].first.insert(start);
+
+	global[context].second.push_back(std::string(full_cct->code_asm));
 }
 // dr clean call
 void
-InsertCleancall(int32_t slot,int32_t num)
+InsertCleancall(int32_t slot,int32_t num, instr_t* instr)
 {
     void *drcontext = dr_get_current_drcontext();
     per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
     context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
     for (int i = 0; i < num; i++) {
         if (pt->cur_buf_list[i].addr != 0) {
-            DoWhatClientWantTodo(drcontext, cur_ctxt_hndl, &pt->cur_buf_list[i]);
+            DoWhatClientWantTodo(drcontext, cur_ctxt_hndl, &pt->cur_buf_list[i], instr);
         }
     }
     BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
@@ -166,8 +168,8 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
             InstrumentMem(drcontext, bb, instr, instr_get_dst(instr, i));
         }
     }
-    dr_insert_clean_call(drcontext, bb, instr, (void *)InsertCleancall, false, 2,
-                         OPND_CREATE_CCT_INT(slot), OPND_CREATE_CCT_INT(num));
+    dr_insert_clean_call(drcontext, bb, instr, (void *)InsertCleancall, false, 3,
+                         OPND_CREATE_CCT_INT(slot), OPND_CREATE_CCT_INT(num), opnd_create_instr(instr));
 }
 
 static void
@@ -192,7 +194,7 @@ ClientThreadEnd(void *drcontext)
     dr_global_free(pt->cur_buf_list, TLS_MEM_REF_BUFF_SIZE * sizeof(mem_ref_t));
     dr_thread_free(drcontext, pt, sizeof(per_thread_t));
 
-	write_thread_all_cct_hpcrun_format(drcontext);
+//	write_thread_all_cct_hpcrun_format(drcontext);
 }
 
 static void
@@ -205,13 +207,24 @@ static void
 ClientExit(void)
 {
     // add output module here
-	for (std::map<std::string, std::set<app_pc>>::iterator it = global.begin(); it != global.end(); ++it) {
-		if (it->first.find("-->main") != std::string::npos)
-			std::cout << it->first << ": " << it->second.size() << std::endl;
+	for (std::map<std::string, std::pair<std::set<app_pc>, std::vector<std::string>>>::iterator it = global.begin(); 
+			it != global.end(); ++it) {
+		if (it->first.find("-->main") != std::string::npos) {
+			std::cout << it->first << ": " << it->second.first.size() << "\n";
+			std::cout << std::string(it->first.size() + 5, '=') << "\n";
+			for (size_t i = 0; i < it->second.second.size(); i++) {
+				std::cout << it->second.second[i] << "\n";
+				if (it->second.second.size() > 20 && i == 19) {
+					std::cout << "(Truncated output to first 20 instructions)\n";
+					break;
+				}
+			}
+			std::cout << std::string(it->first.length() + 5, '=') << std::endl;
+		}
 	}
 
     drcctlib_exit();
-	hpcrun_format_exit();
+	//hpcrun_format_exit();
 
     if (!dr_raw_tls_cfree(tls_offs, INSTRACE_TLS_COUNT)) {
         DRCCTLIB_EXIT_PROCESS(
@@ -267,7 +280,7 @@ dr_client_main(client_id_t id, int argc, const char *argv[])
             "ERROR: drcctlib_memory_with_addr_and_refsize_clean_call dr_raw_tls_calloc fail");
     }
     drcctlib_init(DRCCTLIB_FILTER_MEM_ACCESS_INSTR, INVALID_FILE, InstrumentInsCallback, false);
-	hpcrun_format_init(dr_get_application_name(), true);
+	//hpcrun_format_init(dr_get_application_name(), true);
     dr_register_exit_event(ClientExit);
 }
 
