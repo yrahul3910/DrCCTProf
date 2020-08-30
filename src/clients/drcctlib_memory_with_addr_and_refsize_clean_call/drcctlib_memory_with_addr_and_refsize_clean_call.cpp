@@ -6,6 +6,9 @@
 
 #include <cstddef>
 #include <map>
+#include <string>
+#include <algorithm>
+#include <set>
 #include <cstdio>
 #include <iostream>
 #include "dr_api.h"
@@ -49,22 +52,20 @@ typedef struct _per_thread_t {
 
 #define TLS_MEM_REF_BUFF_SIZE 100
 
-std::map<std::string, int> global;
+std::map<std::string, std::set<app_pc>> global;
 
 // client want to do
 void
 DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref)
 {
     // add online analysis here
-    std::printf("Memory reference %p of size %lu\n", ref->addr, ref->size);
-    std::fflush(stdout);
-    context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 100);
-    std::string context = "";
-    for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt )
-        context += std::string("-->") + std::string(ptr->func_name);
-    std::cout << std::endl;
-    global[context] = ref->size;
-    
+    context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 0);
+	std::string context = "";
+    for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt ) {
+		context += std::string("-->") + std::string(ptr->func_name);
+	}
+	for (app_pc start = ref->addr; start < ref->addr + ref->size; ++start)
+		global[context].insert(start);
 }
 // dr clean call
 void
@@ -201,9 +202,10 @@ static void
 ClientExit(void)
 {
     // add output module here
-	for (std::map<std::string, int>::iterator it = global.begin(); it != global.end(); ++it)
-		std::cout << it->first << " = " << it->second << std::endl;	
-
+	for (std::map<std::string, std::set<app_pc>>::iterator it = global.begin(); it != global.end(); ++it) {
+		if (it->first.find("-->main") != std::string::npos)
+			std::cout << it->first << ": " << it->second.size() << std::endl;
+	}
 
     drcctlib_exit();
 
