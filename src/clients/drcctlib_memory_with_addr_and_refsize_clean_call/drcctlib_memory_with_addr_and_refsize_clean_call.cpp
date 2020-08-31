@@ -53,11 +53,11 @@ typedef struct _per_thread_t {
 
 #define TLS_MEM_REF_BUFF_SIZE 100
 
-std::map<std::string, std::pair<std::set<app_pc>, std::vector<std::string>>> global;
+std::map<std::string, std::set<app_pc>> global;
 
 // client want to do
 void
-DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref, instr_t* instr)
+DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref)
 {
     // add online analysis here
     context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 0);
@@ -66,20 +66,18 @@ DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t 
 		context += std::string("-->") + std::string(ptr->func_name);
 	}
 	for (app_pc start = ref->addr; start < ref->addr + ref->size; ++start)
-		global[context].first.insert(start);
-
-	global[context].second.push_back(std::string(full_cct->code_asm));
+		global[context].insert(start);
 }
 // dr clean call
 void
-InsertCleancall(int32_t slot,int32_t num, instr_t* instr)
+InsertCleancall(int32_t slot,int32_t num)
 {
     void *drcontext = dr_get_current_drcontext();
     per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
     context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
     for (int i = 0; i < num; i++) {
         if (pt->cur_buf_list[i].addr != 0) {
-            DoWhatClientWantTodo(drcontext, cur_ctxt_hndl, &pt->cur_buf_list[i], instr);
+            DoWhatClientWantTodo(drcontext, cur_ctxt_hndl, &pt->cur_buf_list[i]);
         }
     }
     BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
@@ -207,20 +205,15 @@ static void
 ClientExit(void)
 {
     // add output module here
-	for (std::map<std::string, std::pair<std::set<app_pc>, std::vector<std::string>>>::iterator it = global.begin(); 
+	for (std::map<std::string, std::set<app_pc>>::iterator it = global.begin(); 
 			it != global.end(); ++it) {
-		if (it->first.find("-->main") != std::string::npos) {
-			std::cout << it->first << ": " << it->second.first.size() << "\n";
-			std::cout << std::string(it->first.size() + 5, '=') << "\n";
-			for (size_t i = 0; i < it->second.second.size(); i++) {
-				std::cout << it->second.second[i] << "\n";
-				if (it->second.second.size() > 20 && i == 19) {
-					std::cout << "(Truncated output to first 20 instructions)\n";
-					break;
-				}
-			}
-			std::cout << std::string(it->first.length() + 5, '=') << std::endl;
-		}
+		std::cout << "\n\nMEMORY FOOTPRINT OF ";
+		std::string func = it->first.substr(0, it->first.find("-->", 1) + 1);
+		std::cout << func;
+		std::cout << " = " << it->second.size() << " BYTES.\n";
+		std::cout << std::string(20 + func.length() + 13, '=') << "\n";
+		std::cout << "Full context:\n" << it->first << std::endl;
+		std::cout << std::string(20 + func.length() + 13, '=') << "\n";
 	}
 
     drcctlib_exit();
