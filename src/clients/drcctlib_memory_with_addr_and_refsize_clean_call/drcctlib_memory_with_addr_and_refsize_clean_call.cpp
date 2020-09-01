@@ -6,6 +6,7 @@
 
 #include <cstddef>
 #include <map>
+#include <string.h>
 #include <string>
 #include <algorithm>
 #include <vector>
@@ -53,20 +54,20 @@ typedef struct _per_thread_t {
 
 #define TLS_MEM_REF_BUFF_SIZE 100
 
-std::map<std::string, std::set<app_pc>> global;
+std::map<context_handle_t, std::set<app_pc>> global;
 
 // client want to do
 void
 DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref)
 {
     // add online analysis here
-    context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 0);
-	std::string context = "";
-    for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt ) {
-		context += std::string("-->") + std::string(ptr->func_name);
-	}
+//    context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 0);
+//	std::string context = "";
+//    for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt ) {
+//		context += std::string("-->") + std::string(ptr->func_name);
+//	}
 	for (app_pc start = ref->addr; start < ref->addr + ref->size; ++start)
-		global[context].insert(start);
+		global[cur_ctxt_hndl].insert(start);
 }
 // dr clean call
 void
@@ -205,15 +206,33 @@ static void
 ClientExit(void)
 {
     // add output module here
-	for (std::map<std::string, std::set<app_pc>>::iterator it = global.begin(); 
+    typedef struct {
+	    context_t* ctxt;
+	    std::set<app_pc> addr;
+    } my_struct;
+	std::map<std::string, my_struct> mapper;
+	for (std::map<context_handle_t, std::set<app_pc>>::iterator it = global.begin(); 
 			it != global.end(); ++it) {
-		std::cout << "\n\nMEMORY FOOTPRINT OF ";
-		std::string func = it->first.substr(0, it->first.find("-->", 1) + 1);
-		std::cout << func;
-		std::cout << " = " << it->second.size() << " BYTES.\n";
-		std::cout << std::string(20 + func.length() + 13, '=') << "\n";
-		std::cout << "Full context:\n" << it->first << std::endl;
-		std::cout << std::string(20 + func.length() + 13, '=') << "\n";
+		context_t* ctxt = drcctlib_get_full_cct(it->first, 0);
+		if (mapper.find(ctxt->func_name) == mapper.end()) mapper[ctxt->func_name] = {ctxt, it->second};
+		else {
+			std::set<app_pc> first = mapper[ctxt->func_name].addr;
+			std::vector<app_pc> n_addr;
+			std::set_union(first.begin(), first.end(), it->second.begin(), it->second.end(), 
+					std::back_inserter(n_addr));
+			mapper[ctxt->func_name].addr = std::set<app_pc>(n_addr.begin(), n_addr.end());
+		}
+	}
+	for (std::pair<std::string, my_struct> pair : mapper) {
+		context_t* ctxt = pair.second.ctxt;
+		context_handle_t cur_ctxt_hndl = ctxt->ctxt_hndl;
+		std::cout << "\n\nMEMORY FOOTPRINT OF " << ctxt->func_name;
+		std::cout << " = " << pair.second.addr.size() << " BYTES.\n";
+		std::cout << std::string(20 + strlen(ctxt->func_name) + 13, '=') << "\n";
+		std::cout << "Full context:\n";
+		for (context_t* ptr = ctxt; ptr; ptr = ptr->pre_ctxt)
+			std::cout << "-->" << ptr->func_name;
+		std::cout << "\n" << std::string(20 + strlen(ctxt->func_name) + 13, '=') << "\n";
 	}
 
     drcctlib_exit();
