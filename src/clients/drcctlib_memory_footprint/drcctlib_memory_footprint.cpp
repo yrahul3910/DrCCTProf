@@ -56,28 +56,10 @@ typedef struct _per_thread_t {
 
 #define TLS_MEM_REF_BUFF_SIZE 100
 
-typedef enum {
-    INSTR_READ_MEM,
-    INSTR_WRITE_MEM,
-    INSTR_READ_REG,
-    INSTR_WRITE_REG,
-    INSTR_NOT_MEM
-} instr_type;
-
-// client want to do
-void
-DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref, instr_type type)
-{
-	//for (app_pc start = ref->addr; start < ref->addr + ref->size; ++start)
-	//	global[cur_ctxt_hndl].insert(start);
-
-    switch (type) {
-        case INSTR_READ_MEM:
-            break;
-        case INSTR_WRITE_MEM:
-            break
-    }
-}
+// Read = 0, Write = 1
+typedef int instr_type;
+#define INSTR_READ 0
+#define INSTR_WRITE 1
 
 void
 InsertRegCleanCall(int slot, reg_id_t reg, instr_type type)
@@ -90,11 +72,6 @@ InsertMemCleanCall(int slot, instr_t* instr, instr_type type)
     void *drcontext = dr_get_current_drcontext();
     per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
     context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
-    for (int i = 0; i < num; i++) {
-        if (pt->cur_buf_list[i].addr != 0) {
-            DoWhatClientWantTodo(drcontext, cur_ctxt_hndl, &pt->cur_buf_list[i], type);
-        }
-    }
     BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
 }
 
@@ -175,7 +152,7 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
 
         if (opnd_is_memory_reference(op)) {
             dr_insert_clean_call(drcontext, bb, instr, (void *) InsertMemCleanCall, false, 2,
-                    OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_MEM_READ));
+                    OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(0x0));
         } else {
             int num_regs = opnd_num_regs_used(op);
             for (int j = 0; j < num_regs; j++) {
@@ -183,7 +160,7 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
 
                 // Read from reg
                 dr_insert_clean_call(drcontext, bb, instr, (void *) InsertRegCleanCall, false, 3,
-                        OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(INSTR_REG_READ));
+                        OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(0x0));
             }
         }
     }
@@ -193,7 +170,7 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
 
         if (opnd_is_memory_reference(op)) {
             dr_insert_clean_call(drcontext, bb, instr, (void *) InsertMemCleanCall, false, 2,
-                    OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_MEM_WRITE));
+                    OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(0x1));
         } else {
             int num_regs = opnd_num_regs_used(op);
             for (int j = 0; j < num_regs; j++) {
@@ -201,7 +178,7 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
 
                 // Write to reg
                 dr_insert_clean_call(drcontext, bb, instr, (void *) InsertRegCleanCall, false, 3,
-                        OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(INSTR_REG_WRITE));
+                        OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(0x1));
             }
         }
     }
@@ -242,39 +219,6 @@ static void
 ClientExit(void)
 {
     // add output module here
-    typedef struct {
-	    context_t* ctxt;
-	    std::set<app_pc> addr;
-    } my_struct;
-	std::map<std::string, my_struct> mapper;
-	for (std::map<context_handle_t, std::set<app_pc>>::iterator it = global.begin(); 
-			it != global.end(); ++it) {
-		context_t* ctxt = drcctlib_get_full_cct(it->first, 100);
-		if (mapper.find(ctxt->func_name) == mapper.end()) mapper[ctxt->func_name] = {ctxt, it->second};
-		else {
-			std::set<app_pc> first = mapper[ctxt->func_name].addr;
-			mapper[ctxt->func_name].addr.insert(it->second.begin(), it->second.end());
-		}
-	}
-	for (std::map<std::string, my_struct>::iterator it = mapper.begin(); it != mapper.end(); it++) {
-		context_t* ctxt = it->second.ctxt;
-		for (context_t* ptr = ctxt; ptr; ptr = ptr->pre_ctxt) {
-			std::string fn = ptr->func_name;
-			mapper[fn].addr.insert(it->second.addr.begin(), it->second.addr.end());
-		}
-	}
-	for (std::pair<std::string, my_struct> pair : mapper) {
-		context_t* ctxt = pair.second.ctxt;
-		context_handle_t cur_ctxt_hndl = ctxt->ctxt_hndl;
-		std::cout << "\n\nMEMORY FOOTPRINT OF " << pair.first;
-		std::cout << " = " << pair.second.addr.size() << " BYTES." << std::endl;
-		std::cout << std::string(20 + pair.first.length() + 13, '=') << "\n";
-		std::cout << "Full context:" << std::endl;
-		for (context_t* ptr = ctxt; ptr; ptr = ptr->pre_ctxt)
-			std::cout << "-->" << ptr->func_name;
-		std::cout << "\n" << std::string(20 + pair.first.length() + 13, '=') << std::endl;
-	}
-
     drcctlib_exit();
 	//hpcrun_format_exit();
 
