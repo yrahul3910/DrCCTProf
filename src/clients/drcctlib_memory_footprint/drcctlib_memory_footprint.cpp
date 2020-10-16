@@ -42,6 +42,8 @@ static uint tls_offs;
 #    define OPND_CREATE_CCT_INT OPND_CREATE_INT32
 #endif
 
+std::vector<app_pc> accessed;
+
 typedef struct _mem_ref_t {
     app_pc addr;
     size_t size;
@@ -54,31 +56,43 @@ typedef struct _per_thread_t {
 
 #define TLS_MEM_REF_BUFF_SIZE 100
 
-std::map<context_handle_t, std::set<app_pc>> global;
+typedef enum {
+    INSTR_READ_MEM,
+    INSTR_WRITE_MEM,
+    INSTR_READ_REG,
+    INSTR_WRITE_REG,
+    INSTR_NOT_MEM
+} instr_type;
 
 // client want to do
 void
-DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref)
+DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref, instr_type type)
 {
-    // add online analysis here
-//    context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 0);
-//	std::string context = "";
-//    for (context_t* ptr = full_cct; ptr; ptr = ptr->pre_ctxt ) {
-//		context += std::string("-->") + std::string(ptr->func_name);
-//	}
-	for (app_pc start = ref->addr; start < ref->addr + ref->size; ++start)
-		global[cur_ctxt_hndl].insert(start);
+	//for (app_pc start = ref->addr; start < ref->addr + ref->size; ++start)
+	//	global[cur_ctxt_hndl].insert(start);
+
+    switch (type) {
+        case INSTR_READ_MEM:
+            break;
+        case INSTR_WRITE_MEM:
+            break
+    }
 }
-// dr clean call
+
 void
-InsertCleancall(int32_t slot,int32_t num)
+InsertRegCleanCall(int slot, reg_id_t reg, instr_type type)
+{
+}
+
+void
+InsertMemCleanCall(int slot, instr_t* instr, instr_type type)
 {
     void *drcontext = dr_get_current_drcontext();
     per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
     context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
     for (int i = 0; i < num; i++) {
         if (pt->cur_buf_list[i].addr != 0) {
-            DoWhatClientWantTodo(drcontext, cur_ctxt_hndl, &pt->cur_buf_list[i]);
+            DoWhatClientWantTodo(drcontext, cur_ctxt_hndl, &pt->cur_buf_list[i], type);
         }
     }
     BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
@@ -153,22 +167,44 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
 
     instrlist_t *bb = instrument_msg->bb;
     instr_t *instr = instrument_msg->instr;
-    int32_t slot = instrument_msg->slot;
-    int num = 0;
+    int slot = instrument_msg->slot;
+    instr_type type;
+    
     for (int i = 0; i < instr_num_srcs(instr); i++) {
-        if (opnd_is_memory_reference(instr_get_src(instr, i))) {
-            num++;
-            InstrumentMem(drcontext, bb, instr, instr_get_src(instr, i));
+        opnd_t op = instr_get_src(instr, i);
+
+        if (opnd_is_memory_reference(op)) {
+            dr_insert_clean_call(drcontext, bb, instr, (void *) InsertMemCleanCall, false, 2,
+                    OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_MEM_READ));
+        } else {
+            int num_regs = opnd_num_regs_used(op);
+            for (int j = 0; j < num_regs; j++) {
+                reg_id_t reg = opnd_get_reg_used(op, j);
+
+                // Read from reg
+                dr_insert_clean_call(drcontext, bb, instr, (void *) InsertRegCleanCall, false, 3,
+                        OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(INSTR_REG_READ));
+            }
         }
     }
+
     for (int i = 0; i < instr_num_dsts(instr); i++) {
-        if (opnd_is_memory_reference(instr_get_dst(instr, i))) {
-            num++;
-            InstrumentMem(drcontext, bb, instr, instr_get_dst(instr, i));
+        opnd_t op = instr_get_dst(instr, i);
+
+        if (opnd_is_memory_reference(op)) {
+            dr_insert_clean_call(drcontext, bb, instr, (void *) InsertMemCleanCall, false, 2,
+                    OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_MEM_WRITE));
+        } else {
+            int num_regs = opnd_num_regs_used(op);
+            for (int j = 0; j < num_regs; j++) {
+                reg_id_t reg = opnd_get_reg_used(op, j);
+
+                // Write to reg
+                dr_insert_clean_call(drcontext, bb, instr, (void *) InsertRegCleanCall, false, 3,
+                        OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(INSTR_REG_WRITE));
+            }
         }
     }
-    dr_insert_clean_call(drcontext, bb, instr, (void *)InsertCleancall, false, 3,
-                         OPND_CREATE_CCT_INT(slot), OPND_CREATE_CCT_INT(num), opnd_create_instr(instr));
 }
 
 static void
