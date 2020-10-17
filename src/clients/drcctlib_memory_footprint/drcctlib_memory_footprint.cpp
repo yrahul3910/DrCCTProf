@@ -42,7 +42,10 @@ static uint tls_offs;
 #    define OPND_CREATE_CCT_INT OPND_CREATE_INT32
 #endif
 
-std::vector<app_pc> accessed;
+using MAP_TYPE = std::map<app_pc, int>;
+
+MAP_TYPE mem_writes;
+MAP_TYPE mem_stats;
 
 typedef struct _mem_ref_t {
     app_pc addr;
@@ -69,10 +72,29 @@ InsertRegCleanCall(int slot, reg_id_t reg, instr_type type)
 void
 InsertMemCleanCall(int slot, instr_t* instr, instr_type type)
 {
+	std::cout << "Entered mem clean call!" << std::endl;
     void *drcontext = dr_get_current_drcontext();
     per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
     context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
+
+	app_pc addr = (&pt->cur_buf_list[0])->addr;
+
+	if (type == INSTR_WRITE) {
+		if (mem_writes.find(addr) != mem_writes.end()) {
+			// Dead write
+			mem_writes[addr]++;
+		}
+	} else if (type == INSTR_READ) {
+		MAP_TYPE::iterator it;	
+		if ((it = mem_writes.find(addr)) != mem_writes.end()) {
+			int count = mem_writes[addr];
+			mem_writes.erase(it);
+			mem_stats[addr] += count;
+		}
+	}
+
     BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
+	std::cout << "Exited mem clean call!" << std::endl;
 }
 
 // insert
@@ -141,73 +163,89 @@ InstrumentMem(void *drcontext, instrlist_t *ilist, instr_t *where, opnd_t ref)
 void
 InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
 {
-
+	std::cout << "ins begin" << std::endl;
     instrlist_t *bb = instrument_msg->bb;
     instr_t *instr = instrument_msg->instr;
     int slot = instrument_msg->slot;
     instr_type type;
-    
+	std::cout << "ins end" << std::endl;
+
+
+	int num = 0;
     for (int i = 0; i < instr_num_srcs(instr); i++) {
+        if (opnd_is_memory_reference(instr_get_src(instr, i))) {
+            num++;
+            InstrumentMem(drcontext, bb, instr, instr_get_src(instr, i));
+        }
+    }
+    for (int i = 0; i < instr_num_dsts(instr); i++) {
+        if (opnd_is_memory_reference(instr_get_dst(instr, i))) {
+            num++;
+            InstrumentMem(drcontext, bb, instr, instr_get_dst(instr, i));
+        }
+    }
+
+
+	context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
+	context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 1);
+	std::cout << full_cct->code_asm << std::endl;
+    
+	std::cout << "instr num srcs = " << instr_num_srcs(instr) << std::endl;
+	std::cout << "instr num dsts = " << instr_num_dsts(instr) << std::endl;
+    for (int i = 0; i < instr_num_srcs(instr); i++) {
+		std::cout << i << std::endl;
+		std::cout << "Getting the src..." << std::endl;
         opnd_t op = instr_get_src(instr, i);
+		std::cout << "Got the src!" << std::endl;
 
         if (opnd_is_memory_reference(op)) {
+			std::cout << "Putting the thing in..." << std::endl;
             dr_insert_clean_call(drcontext, bb, instr, (void *) InsertMemCleanCall, false, 2,
                     OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(0x0));
+			std::cout << "Wrote the thing in!" << std::endl;
         } else {
             int num_regs = opnd_num_regs_used(op);
             for (int j = 0; j < num_regs; j++) {
                 reg_id_t reg = opnd_get_reg_used(op, j);
 
                 // Read from reg
+				std::cout << "Putting the reg thing in..." << std::endl;
                 dr_insert_clean_call(drcontext, bb, instr, (void *) InsertRegCleanCall, false, 3,
                         OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(0x0));
+				std::cout << "Wrote the reg!" << std::endl;
             }
         }
     }
 
     for (int i = 0; i < instr_num_dsts(instr); i++) {
+		std::cout << i << std::endl;
+		std::cout << "Getting the dest..." << std::endl;
         opnd_t op = instr_get_dst(instr, i);
+		std::cout << "Got the dest!" << std::endl;
 
         if (opnd_is_memory_reference(op)) {
+			std::cout << "Putting the thing in..." << std::endl;
             dr_insert_clean_call(drcontext, bb, instr, (void *) InsertMemCleanCall, false, 2,
                     OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(0x1));
+			std::cout << "Read the mem!" << std::endl;
         } else {
             int num_regs = opnd_num_regs_used(op);
             for (int j = 0; j < num_regs; j++) {
                 reg_id_t reg = opnd_get_reg_used(op, j);
 
                 // Write to reg
+				std::cout << "Putting the reg thing in..." << std::endl;
                 dr_insert_clean_call(drcontext, bb, instr, (void *) InsertRegCleanCall, false, 3,
                         OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(0x1));
+				std::cout << "Read the reg!" << std::endl;
             }
         }
     }
+
+	std::cout << mem_writes.size() << std::endl;
+	std::cout << mem_stats.size() << std::endl;
 }
 
-static void
-ClientThreadStart(void *drcontext)
-{
-    per_thread_t *pt = (per_thread_t *)dr_thread_alloc(drcontext, sizeof(per_thread_t));
-    if (pt == NULL) {
-        DRCCTLIB_EXIT_PROCESS("pt == NULL");
-    }
-    drmgr_set_tls_field(drcontext, tls_idx, (void *)pt);
-
-    pt->cur_buf = dr_get_dr_segment_base(tls_seg);
-    pt->cur_buf_list =
-        (mem_ref_t *)dr_global_alloc(TLS_MEM_REF_BUFF_SIZE * sizeof(mem_ref_t));
-    BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
-}
-
-static void
-ClientThreadEnd(void *drcontext)
-{
-    per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
-    dr_global_free(pt->cur_buf_list, TLS_MEM_REF_BUFF_SIZE * sizeof(mem_ref_t));
-    dr_thread_free(drcontext, pt, sizeof(per_thread_t));
-
-//	write_thread_all_cct_hpcrun_format(drcontext);
-}
 
 static void
 ClientInit(int argc, const char *argv[])
@@ -220,15 +258,18 @@ ClientExit(void)
 {
     // add output module here
     drcctlib_exit();
+	std::cout << "Starting output..." << std::endl;
+	for (auto it = mem_writes.begin(); it != mem_writes.end(); ++it)
+		std::cout << std::hex << it->first << std::dec << ": " <<  it->second << std::endl;
+
+
 	//hpcrun_format_exit();
 
     if (!dr_raw_tls_cfree(tls_offs, INSTRACE_TLS_COUNT)) {
         DRCCTLIB_EXIT_PROCESS(
             "ERROR: drcctlib_memory_footprint dr_raw_tls_calloc fail");
     }
-    if (!drmgr_unregister_thread_init_event(ClientThreadStart) ||
-        !drmgr_unregister_thread_exit_event(ClientThreadEnd) ||
-        !drmgr_unregister_tls_field(tls_idx)) {
+    if (!drmgr_unregister_tls_field(tls_idx)) {
         DRCCTLIB_PRINTF("ERROR: drcctlib_memory_footprint failed to "
                         "unregister in ClientExit");
     }
@@ -263,8 +304,8 @@ dr_client_main(client_id_t id, int argc, const char *argv[])
         DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_footprint "
                               "unable to initialize drutil");
     }
-    drmgr_register_thread_init_event(ClientThreadStart);
-    drmgr_register_thread_exit_event(ClientThreadEnd);
+    //drmgr_register_thread_init_event(ClientThreadStart);
+    //drmgr_register_thread_exit_event(ClientThreadEnd);
 
     tls_idx = drmgr_register_tls_field();
     if (tls_idx == -1) {
