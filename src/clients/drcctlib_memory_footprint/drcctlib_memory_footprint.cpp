@@ -4,7 +4,6 @@
  *  See LICENSE file for more information.
  */
 
-#include <cstddef>
 #include <map>
 #include <string.h>
 #include <string>
@@ -13,18 +12,19 @@
 #include <set>
 #include <cstdio>
 #include <iostream>
+#include <cstddef>
 #include "dr_api.h"
 #include "drmgr.h"
 #include "drreg.h"
 #include "drutil.h"
 #include "drcctlib.h"
-//#include "drcctlib_hpcviewer_format.h"
 
 #define DRCCTLIB_PRINTF(format, args...) \
-    DRCCTLIB_PRINTF_TEMPLATE("memory_footprint", format, ##args)
+    DRCCTLIB_PRINTF_TEMPLATE("memory_with_addr_and_refsize_clean_call", format, ##args)
 #define DRCCTLIB_EXIT_PROCESS(format, args...)                                           \
-    DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_footprint", format, \
+    DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_with_addr_and_refsize_clean_call", format, \
                                           ##args)
+
 static int tls_idx;
 
 enum {
@@ -43,7 +43,6 @@ static uint tls_offs;
 #endif
 
 using MAP_TYPE = std::map<app_pc, int>;
-
 MAP_TYPE mem_writes;
 MAP_TYPE mem_stats;
 
@@ -57,28 +56,33 @@ typedef struct _per_thread_t {
     void *cur_buf;
 } per_thread_t;
 
+typedef int instr_type;
+#define INSTR_READ 0x0
+#define INSTR_WRITE 0x1
+
 #define TLS_MEM_REF_BUFF_SIZE 100
 
-// Read = 0, Write = 1
-typedef int instr_type;
-#define INSTR_READ 0
-#define INSTR_WRITE 1
-
+// client want to do
 void
-InsertRegCleanCall(int slot, reg_id_t reg, instr_type type)
+DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref)
 {
+    // add online analysis here
+	 
 }
 
+
+
 void
-InsertMemCleanCall(int slot, instr_t* instr, instr_type type)
+InsertMemCleanCall(int slot, instr_t* instr, instr_type type, int num)
 {
-	std::cout << "Entered mem clean call!" << std::endl;
     void *drcontext = dr_get_current_drcontext();
     per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
     context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
+	context_t* ctxt = drcctlib_get_cct(cur_ctxt_hndl, 0);
 
-	app_pc addr = (&pt->cur_buf_list[0])->addr;
-
+	app_pc addr = (&pt->cur_buf_list[num])->addr;
+	//std::printf("Got addr = %p\n", addr);
+	//std::fflush(stdout);
 	if (type == INSTR_WRITE) {
 		if (mem_writes.find(addr) != mem_writes.end()) {
 			// Dead write
@@ -94,8 +98,9 @@ InsertMemCleanCall(int slot, instr_t* instr, instr_type type)
 	}
 
     BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
-	std::cout << "Exited mem clean call!" << std::endl;
 }
+
+
 
 // insert
 static void
@@ -163,89 +168,56 @@ InstrumentMem(void *drcontext, instrlist_t *ilist, instr_t *where, opnd_t ref)
 void
 InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
 {
-	std::cout << "ins begin" << std::endl;
+
     instrlist_t *bb = instrument_msg->bb;
     instr_t *instr = instrument_msg->instr;
-    int slot = instrument_msg->slot;
-    instr_type type;
-	std::cout << "ins end" << std::endl;
-
-
-	int num = 0;
+    int32_t slot = instrument_msg->slot;
+    int num = 0;
     for (int i = 0; i < instr_num_srcs(instr); i++) {
+		// Read
         if (opnd_is_memory_reference(instr_get_src(instr, i))) {
-            num++;
             InstrumentMem(drcontext, bb, instr, instr_get_src(instr, i));
-        }
+
+			dr_insert_clean_call(drcontext, bb, instr, (void*) InsertMemCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_READ), OPND_CREATE_CCT_INT(num));
+					num++;
+        } else {
+			// Reg
+		}
     }
     for (int i = 0; i < instr_num_dsts(instr); i++) {
+		// Write
         if (opnd_is_memory_reference(instr_get_dst(instr, i))) {
-            num++;
             InstrumentMem(drcontext, bb, instr, instr_get_dst(instr, i));
-        }
-    }
-
-
-	context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
-	context_t* full_cct = drcctlib_get_full_cct(cur_ctxt_hndl, 1);
-	std::cout << full_cct->code_asm << std::endl;
-    
-	std::cout << "instr num srcs = " << instr_num_srcs(instr) << std::endl;
-	std::cout << "instr num dsts = " << instr_num_dsts(instr) << std::endl;
-    for (int i = 0; i < instr_num_srcs(instr); i++) {
-		std::cout << i << std::endl;
-		std::cout << "Getting the src..." << std::endl;
-        opnd_t op = instr_get_src(instr, i);
-		std::cout << "Got the src!" << std::endl;
-
-        if (opnd_is_memory_reference(op)) {
-			std::cout << "Putting the thing in..." << std::endl;
-            dr_insert_clean_call(drcontext, bb, instr, (void *) InsertMemCleanCall, false, 2,
-                    OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(0x0));
-			std::cout << "Wrote the thing in!" << std::endl;
+			dr_insert_clean_call(drcontext, bb, instr, (void*) InsertMemCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_WRITE), OPND_CREATE_CCT_INT(num));
+            num++;
         } else {
-            int num_regs = opnd_num_regs_used(op);
-            for (int j = 0; j < num_regs; j++) {
-                reg_id_t reg = opnd_get_reg_used(op, j);
-
-                // Read from reg
-				std::cout << "Putting the reg thing in..." << std::endl;
-                dr_insert_clean_call(drcontext, bb, instr, (void *) InsertRegCleanCall, false, 3,
-                        OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(0x0));
-				std::cout << "Wrote the reg!" << std::endl;
-            }
-        }
+			// Reg
+		}
     }
-
-    for (int i = 0; i < instr_num_dsts(instr); i++) {
-		std::cout << i << std::endl;
-		std::cout << "Getting the dest..." << std::endl;
-        opnd_t op = instr_get_dst(instr, i);
-		std::cout << "Got the dest!" << std::endl;
-
-        if (opnd_is_memory_reference(op)) {
-			std::cout << "Putting the thing in..." << std::endl;
-            dr_insert_clean_call(drcontext, bb, instr, (void *) InsertMemCleanCall, false, 2,
-                    OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(0x1));
-			std::cout << "Read the mem!" << std::endl;
-        } else {
-            int num_regs = opnd_num_regs_used(op);
-            for (int j = 0; j < num_regs; j++) {
-                reg_id_t reg = opnd_get_reg_used(op, j);
-
-                // Write to reg
-				std::cout << "Putting the reg thing in..." << std::endl;
-                dr_insert_clean_call(drcontext, bb, instr, (void *) InsertRegCleanCall, false, 3,
-                        OPND_CREATE_CCT_INT(slot), opnd_create_reg(reg), OPND_CREATE_CCT_INT(0x1));
-				std::cout << "Read the reg!" << std::endl;
-            }
-        }
-    }
-
-	std::cout << mem_writes.size() << std::endl;
-	std::cout << mem_stats.size() << std::endl;
 }
 
+static void
+ClientThreadStart(void *drcontext)
+{
+    per_thread_t *pt = (per_thread_t *)dr_thread_alloc(drcontext, sizeof(per_thread_t));
+    if (pt == NULL) {
+        DRCCTLIB_EXIT_PROCESS("pt == NULL");
+    }
+    drmgr_set_tls_field(drcontext, tls_idx, (void *)pt);
+
+    pt->cur_buf = dr_get_dr_segment_base(tls_seg);
+    pt->cur_buf_list =
+        (mem_ref_t *)dr_global_alloc(TLS_MEM_REF_BUFF_SIZE * sizeof(mem_ref_t));
+    BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
+}
+
+static void
+ClientThreadEnd(void *drcontext)
+{
+    per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
+    dr_global_free(pt->cur_buf_list, TLS_MEM_REF_BUFF_SIZE * sizeof(mem_ref_t));
+    dr_thread_free(drcontext, pt, sizeof(per_thread_t));
+}
 
 static void
 ClientInit(int argc, const char *argv[])
@@ -257,20 +229,23 @@ static void
 ClientExit(void)
 {
     // add output module here
-    drcctlib_exit();
 	std::cout << "Starting output..." << std::endl;
 	for (auto it = mem_writes.begin(); it != mem_writes.end(); ++it)
 		std::cout << std::hex << it->first << std::dec << ": " <<  it->second << std::endl;
+	
+	std::cout <<"program end" <<std::endl;
 
 
-	//hpcrun_format_exit();
+    drcctlib_exit();
 
     if (!dr_raw_tls_cfree(tls_offs, INSTRACE_TLS_COUNT)) {
         DRCCTLIB_EXIT_PROCESS(
-            "ERROR: drcctlib_memory_footprint dr_raw_tls_calloc fail");
+            "ERROR: drcctlib_memory_with_addr_and_refsize_clean_call dr_raw_tls_calloc fail");
     }
-    if (!drmgr_unregister_tls_field(tls_idx)) {
-        DRCCTLIB_PRINTF("ERROR: drcctlib_memory_footprint failed to "
+    if (!drmgr_unregister_thread_init_event(ClientThreadStart) ||
+        !drmgr_unregister_thread_exit_event(ClientThreadEnd) ||
+        !drmgr_unregister_tls_field(tls_idx)) {
+        DRCCTLIB_PRINTF("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call failed to "
                         "unregister in ClientExit");
     }
     drmgr_exit();
@@ -287,37 +262,36 @@ extern "C" {
 DR_EXPORT void
 dr_client_main(client_id_t id, int argc, const char *argv[])
 {
-    dr_set_client_name("DynamoRIO Client 'drcctlib_memory_footprint'",
+    dr_set_client_name("DynamoRIO Client 'drcctlib_memory_with_addr_and_refsize_clean_call'",
                        "http://dynamorio.org/issues");
     ClientInit(argc, argv);
 
     if (!drmgr_init()) {
-        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_footprint "
+        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call "
                               "unable to initialize drmgr");
     }
     drreg_options_t ops = { sizeof(ops), 4 /*max slots needed*/, false };
     if (drreg_init(&ops) != DRREG_SUCCESS) {
-        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_footprint "
+        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call "
                               "unable to initialize drreg");
     }
     if (!drutil_init()) {
-        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_footprint "
+        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call "
                               "unable to initialize drutil");
     }
-    //drmgr_register_thread_init_event(ClientThreadStart);
-    //drmgr_register_thread_exit_event(ClientThreadEnd);
+    drmgr_register_thread_init_event(ClientThreadStart);
+    drmgr_register_thread_exit_event(ClientThreadEnd);
 
     tls_idx = drmgr_register_tls_field();
     if (tls_idx == -1) {
-        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_footprint "
+        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call "
                               "drmgr_register_tls_field fail");
     }
     if (!dr_raw_tls_calloc(&tls_seg, &tls_offs, INSTRACE_TLS_COUNT, 0)) {
         DRCCTLIB_EXIT_PROCESS(
-            "ERROR: drcctlib_memory_footprint dr_raw_tls_calloc fail");
+            "ERROR: drcctlib_memory_with_addr_and_refsize_clean_call dr_raw_tls_calloc fail");
     }
     drcctlib_init(DRCCTLIB_FILTER_MEM_ACCESS_INSTR, INVALID_FILE, InstrumentInsCallback, false);
-	//hpcrun_format_init(dr_get_application_name(), true);
     dr_register_exit_event(ClientExit);
 }
 

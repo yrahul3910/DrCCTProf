@@ -7,10 +7,9 @@
 # **********************************************************
 
 CUR_DIR=$(cd "$(dirname "$0")";pwd)
+rm -rf logs/*
 
-echo -e "init env..."
+$CUR_DIR/test_apps/build.sh
 $CUR_DIR/scripts/build_tool/env_init.sh
-
-echo -e "make..."
 $CUR_DIR/scripts/build_tool/make.sh
 

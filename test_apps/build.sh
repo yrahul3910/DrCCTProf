@@ -16,10 +16,5 @@ if [ ! -d ${BUILD} ]; then
 fi
 
 echo -e "\033[32m Start build test apps... \033[0m"
-g++ -g ${SRC}/test_app_cct.cpp -o ${BUILD}/test_app_cct
-g++ -g ${SRC}/test_app_multithread.cpp -o ${BUILD}/test_app_multithread -pthread
-g++ -g ${SRC}/test_app_reuse.cpp -o ${BUILD}/test_app_reuse 
-g++ -g ${SRC}/test_app_signal.cpp -o ${BUILD}/test_app_signal
-g++ -g ${SRC}/test_app_512.cpp -o ${BUILD}/test_app_512
-g++ -g ${SRC}/test_dead_writes.cpp -o ${BUILD}/test_app_dead_writes
+for file in src/*.cpp; do g++ -g $file -o ${BUILD}/"${file##*/}"; done
 echo -e "\033[32m Build test apps successfully! \033[0m"
