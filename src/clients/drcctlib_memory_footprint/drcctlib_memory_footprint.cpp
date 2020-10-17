@@ -20,9 +20,9 @@
 #include "drcctlib.h"
 
 #define DRCCTLIB_PRINTF(format, args...) \
-    DRCCTLIB_PRINTF_TEMPLATE("memory_with_addr_and_refsize_clean_call", format, ##args)
+    DRCCTLIB_PRINTF_TEMPLATE("memory_footprint", format, ##args)
 #define DRCCTLIB_EXIT_PROCESS(format, args...)                                           \
-    DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_with_addr_and_refsize_clean_call", format, \
+    DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_footprint", format, \
                                           ##args)
 
 static int tls_idx;
@@ -77,16 +77,15 @@ InsertMemCleanCall(int slot, instr_t* instr, instr_type type, int num)
 {
     void *drcontext = dr_get_current_drcontext();
     per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
-    context_handle_t cur_ctxt_hndl = drcctlib_get_context_handle(drcontext, slot);
-	context_t* ctxt = drcctlib_get_cct(cur_ctxt_hndl, 0);
 
 	app_pc addr = (&pt->cur_buf_list[num])->addr;
-	//std::printf("Got addr = %p\n", addr);
-	//std::fflush(stdout);
+
 	if (type == INSTR_WRITE) {
 		if (mem_writes.find(addr) != mem_writes.end()) {
 			// Dead write
 			mem_writes[addr]++;
+		} else {
+			mem_writes[addr] = 0;
 		}
 	} else if (type == INSTR_READ) {
 		MAP_TYPE::iterator it;	
@@ -94,6 +93,7 @@ InsertMemCleanCall(int slot, instr_t* instr, instr_type type, int num)
 			int count = mem_writes[addr];
 			mem_writes.erase(it);
 			mem_stats[addr] += count;
+
 		}
 	}
 
@@ -225,14 +225,34 @@ ClientInit(int argc, const char *argv[])
     
 }
 
+// from https://stackoverflow.com/a/5056797/10066306
+template<typename A, typename B>
+std::pair<B,A> flip_pair(const std::pair<A,B> &p)
+{
+    return std::pair<B,A>(p.second, p.first);
+}
+
+template<typename A, typename B>
+std::multimap<B,A> flip_map(const std::map<A,B> &src)
+{
+    std::multimap<B,A> dst;
+    std::transform(src.begin(), src.end(), std::inserter(dst, dst.begin()),
+                   flip_pair<A,B>);
+    return dst;
+}
+
 static void
 ClientExit(void)
 {
     // add output module here
 	std::cout << "Starting output..." << std::endl;
-	for (auto it = mem_writes.begin(); it != mem_writes.end(); ++it)
-		std::cout << std::hex << it->first << std::dec << ": " <<  it->second << std::endl;
+
+	//std::multimap<int, app_pc> stats_flipped = flip_map(mem_stats);
+	for (auto it = mem_stats.begin(); it != mem_stats.end(); ++it) {
+		std::printf("%p: %d\n", it->first, it->second);
+	}
 	
+	std::fflush(stdout);
 	std::cout <<"program end" <<std::endl;
 
 
@@ -240,12 +260,12 @@ ClientExit(void)
 
     if (!dr_raw_tls_cfree(tls_offs, INSTRACE_TLS_COUNT)) {
         DRCCTLIB_EXIT_PROCESS(
-            "ERROR: drcctlib_memory_with_addr_and_refsize_clean_call dr_raw_tls_calloc fail");
+            "ERROR: drcctlib_memory_footprint dr_raw_tls_calloc fail");
     }
     if (!drmgr_unregister_thread_init_event(ClientThreadStart) ||
-        !drmgr_unregister_thread_exit_event(ClientThreadEnd) ||
-        !drmgr_unregister_tls_field(tls_idx)) {
-        DRCCTLIB_PRINTF("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call failed to "
+		!drmgr_unregister_thread_exit_event(ClientThreadEnd) ||
+		!drmgr_unregister_tls_field(tls_idx)) {
+        DRCCTLIB_PRINTF("ERROR: drcctlib_memory_footprint failed to "
                         "unregister in ClientExit");
     }
     drmgr_exit();
@@ -262,21 +282,21 @@ extern "C" {
 DR_EXPORT void
 dr_client_main(client_id_t id, int argc, const char *argv[])
 {
-    dr_set_client_name("DynamoRIO Client 'drcctlib_memory_with_addr_and_refsize_clean_call'",
+    dr_set_client_name("DynamoRIO Client 'drcctlib_memory_footprint'",
                        "http://dynamorio.org/issues");
     ClientInit(argc, argv);
 
     if (!drmgr_init()) {
-        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call "
+        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_footprint "
                               "unable to initialize drmgr");
     }
     drreg_options_t ops = { sizeof(ops), 4 /*max slots needed*/, false };
     if (drreg_init(&ops) != DRREG_SUCCESS) {
-        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call "
+        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_footprint "
                               "unable to initialize drreg");
     }
     if (!drutil_init()) {
-        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call "
+        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_footprint "
                               "unable to initialize drutil");
     }
     drmgr_register_thread_init_event(ClientThreadStart);
@@ -284,12 +304,12 @@ dr_client_main(client_id_t id, int argc, const char *argv[])
 
     tls_idx = drmgr_register_tls_field();
     if (tls_idx == -1) {
-        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_with_addr_and_refsize_clean_call "
+        DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_memory_footprint "
                               "drmgr_register_tls_field fail");
     }
     if (!dr_raw_tls_calloc(&tls_seg, &tls_offs, INSTRACE_TLS_COUNT, 0)) {
         DRCCTLIB_EXIT_PROCESS(
-            "ERROR: drcctlib_memory_with_addr_and_refsize_clean_call dr_raw_tls_calloc fail");
+            "ERROR: drcctlib_memory_footprint dr_raw_tls_calloc fail");
     }
     drcctlib_init(DRCCTLIB_FILTER_MEM_ACCESS_INSTR, INVALID_FILE, InstrumentInsCallback, false);
     dr_register_exit_event(ClientExit);

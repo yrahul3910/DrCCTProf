@@ -16,5 +16,5 @@ if [ ! -d ${BUILD} ]; then
 fi
 
 echo -e "\033[32m Start build test apps... \033[0m"
-for file in src/*.cpp; do g++ -g $file -o ${BUILD}/"${file##*/}"; done
+for file in ./test_apps/src/*.cpp; do g++ -g $file -o ${BUILD}/"${file##*/}"; done
 echo -e "\033[32m Build test apps successfully! \033[0m"
