@@ -1,0 +1,2627 @@
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(356):"(0x00007fbf8244b2f3)mov    dword ptr [rsp+0x58], eax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_relocate_object(308):"(0x00007fbf8244db44)call   0x00007fbf8244c100"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(338):"(0x00007fbf8244b2ae)mov    qword ptr [rsp+0x60], rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_relocate_object(308):"(0x00007fbf8244db44)call   0x00007fbf8244c100"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_lookup_symbol_x(804):"(0x00007fbf8244c1b1)mov    qword ptr [rsp+0x28], 0x00000000"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_relocate_object(308):"(0x00007fbf8244db44)call   0x00007fbf8244c100"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_lookup_symbol_x(792):"(0x00007fbf8244c176)mov    qword ptr [rsp+0x40], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_relocate_object(308):"(0x00007fbf8244db44)call   0x00007fbf8244c100"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(375):"(0x00007fbf8244b71c)mov    qword ptr [rsp+0x78], 0x00000000"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_relocate_object(308):"(0x00007fbf8244db44)call   0x00007fbf8244c100"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(374):"(0x00007fbf8244b728)mov    dword ptr [rsp+0x68], 0x00000000"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_relocate_object(308):"(0x00007fbf8244db44)call   0x00007fbf8244c100"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(308):"(0x00007fbf8244db08)mov    dword ptr [r14+0x00000400], r9d"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(308):"(0x00007fbf8244db08)mov    dword ptr [r14+0x00000400], r9d"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(308):"(0x00007fbf8244db50)mov    qword ptr [r14+0x00000408], r11"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(308):"(0x00007fbf8244db50)mov    qword ptr [r14+0x00000408], r11"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(308):"(0x00007fbf8244db57)mov    qword ptr [r14+0x00000410], rax"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(308):"(0x00007fbf8244db57)mov    qword ptr [r14+0x00000410], rax"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+malloc(83):"(0x00007fbf8245c5a8)mov    <rel> qword ptr [0x00007fbf8266a0d8], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_allocate_tls_storage(346):"(0x00007fbf824540f7)call   0x00007fbf82441ea0"[../elf/dl-tls.c]
+init_tls(730):"(0x00007fbf82441fd7)call   0x00007fbf824540e0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+dl_main(1801):"(0x00007fbf8244501a)call   0x00007fbf82441f10"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+malloc(61):"(0x00007fbf8245c503)mov    <rel> qword ptr [0x00007fbf8266a0d8], rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_allocate_tls_storage(346):"(0x00007fbf824540f7)call   0x00007fbf82441ea0"[../elf/dl-tls.c]
+init_tls(730):"(0x00007fbf82441fd7)call   0x00007fbf824540e0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+dl_main(1801):"(0x00007fbf8244501a)call   0x00007fbf82441f10"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(173):"(0x00007fbf824529c9)mov    dword ptr [rsp+0x48], esi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(95):"(0x00007fbf82452b3e)mov    qword ptr [rsp+0x28], r12"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(159):"(0x00007fbf8244d944)mov    dword ptr [rbp-0xd8], r12d"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-reloc.c]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sort_maps(35):"(0x00007fbf82458d6c)mov    qword ptr [rbp-0x90], rcx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-sort-maps.c]
+_dl_fini(94):"(0x00007fbf82451b24)call   0x00007fbf82458cd0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(47):"(0x00007fbf82451a12)mov    dword ptr [rbp-0x40], 0x00000000"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+open_verify.constprop.7(1598):"(0x00007fbf82446c00)mov    qword ptr [rbp-0x48], r9"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2292):"(0x00007fbf8244a419)call   0x00007fbf82446be0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sort_maps(39):"(0x00007fbf82458d93)mov    word ptr [r9], ax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-sort-maps.c]
+_dl_map_object_deps(590):"(0x00007fbf8244fb3b)call   0x00007fbf82458cd0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sort_maps(35):"(0x00007fbf82458d65)mov    qword ptr [rbp-0x88], rbx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-sort-maps.c]
+_dl_fini(94):"(0x00007fbf82451b24)call   0x00007fbf82458cd0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sort_maps(35):"(0x00007fbf82458d4d)mov    dword ptr [rbp-0x78], eax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-sort-maps.c]
+_dl_fini(94):"(0x00007fbf82451b24)call   0x00007fbf82458cd0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__unregister_atfork(28):"(0x00007fbeb41a7b99)mov    qword ptr [rbp-0x18], rax"[/build/glibc-2ORdQG/glibc-2.27/nptl/unregister-atfork.c]
+__cxa_finalize(107):"(0x00007fbeb40ba799)call   0x00007fbeb41a7b80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/cxa_finalize.c]
+__do_global_dtors_aux(0):"(0x00007fbf7e46963e)call   0x00007fbf7e469550"[]
+_dl_fini(138):"(0x00007fbf82451bc0)call   qword ptr [r15]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__GI___cxa_atexit(65):"(0x00007fbeb40ba4e8)push   rbx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/cxa_atexit.c]
+__libc_start_main(240):"(0x00007fbeb4098af7)call   0x00007fbeb40ba4e0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+handle_intel.constprop.1(281):"(0x00007fbeb4132f5e)mov    dword ptr [rsp+0x08], edx"[../sysdeps/x86/cacheinfo.c]
+init_cacheinfo(504):"(0x00007fbeb4098578)call   0x00007fbeb4132ef0"[../sysdeps/x86/cacheinfo.c]
+_dl_init(72):"(0x00007fbf82451780)call   qword ptr [r14]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(173):"(0x00007fbf824529c5)mov    dword ptr [rsp+0x4c], edx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sort_maps(39):"(0x00007fbf82458d8f)mov    word ptr [rbp-0x34], ax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-sort-maps.c]
+_dl_map_object_deps(590):"(0x00007fbf8244fb3b)call   0x00007fbf82458cd0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2080):"(0x00007fbf82449e64)mov    dword ptr [rsp+0x08], edx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_load_cache_lookup(39):"(0x00007fbf8245911e)mov    qword ptr [rbp-0x60], r15"[../sysdeps/x86/dl-procinfo.h]
+_dl_map_object(2255):"(0x00007fbf8244a3ce)call   0x00007fbf824590b0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+open_verify.constprop.7(1598):"(0x00007fbf82446c04)mov    dword ptr [rbp-0x40], eax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2292):"(0x00007fbf8244a419)call   0x00007fbf82446be0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2196):"(0x00007fbf8244a66f)mov    qword ptr [rsp+0x28], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(375):"(0x00007fbf8244b71c)mov    qword ptr [rsp+0x78], 0x00000000"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_vdso_vsym(39):"(0x00007fbeb41de64e)call   qword ptr [rax+0x00000178]"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+time_ifunc(43):"(0x00007fbeb4149a51)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86/time.c]
+_dl_relocate_object(577):"(0x00007fbf8244dbc1)call   rax"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_vdso_vsym(34):"(0x00007fbeb41de640)movaps oword ptr [rsp+0x10], xmm0"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+time_ifunc(43):"(0x00007fbeb4149a51)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86/time.c]
+_dl_relocate_object(577):"(0x00007fbf8244dbc1)call   rax"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_vdso_vsym(35):"(0x00007fbeb41de645)mov    byte ptr [rsp+0x14], 0x20"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+time_ifunc(43):"(0x00007fbeb4149a51)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86/time.c]
+_dl_relocate_object(577):"(0x00007fbf8244dbc1)call   rax"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+====================101363 MEMORY DEAD WRITES ====================
+[1]
+0x7fff0d356248: 165
+[Killing context]
+
+[Dead context]
+====================
+
+[2]
+0x7fff0d356288: 85
+[Killing context]
+
+[Dead context]
+====================
+
+[3]
+0x7fff0d356290: 85
+[Killing context]
+
+[Dead context]
+====================
+
+[4]
+0x7fff0d356358: 85
+[Killing context]
+
+[Dead context]
+====================
+
+[5]
+0x7fff0d356370: 85
+[Killing context]
+
+[Dead context]
+====================
+
+[6]
+0x7fff0d3562a8: 82
+[Killing context]
+
+[Dead context]
+====================
+
+[7]
+0x7fff0d356298: 81
+[Killing context]
+
+[Dead context]
+====================
+
+[8]
+0x7fff0d3562b8: 81
+[Killing context]
+
+[Dead context]
+====================
+
+[9]
+0x7fff0d356380: 81
+[Killing context]
+
+[Dead context]
+====================
+
+[10]
+0x7fff0d356258: 70
+[Killing context]
+
+[Dead context]
+====================
+
+[11]
+0x7fbf7ec2e400: 66
+[Killing context]
+
+[Dead context]
+====================
+
+[12]
+0x7fbf7ec2e408: 66
+[Killing context]
+
+[Dead context]
+====================
+
+[13]
+0x7fbf7ec2e410: 66
+[Killing context]
+
+[Dead context]
+====================
+
+[14]
+0x7fbf8266a0d8: 17
+[Killing context]
+
+[Dead context]
+====================
+
+[15]
+0x7fff0d3564a0: 9
+[Killing context]
+
+[Dead context]
+====================
+
+[16]
+0x7fff0d356438: 8
+[Killing context]
+
+[Dead context]
+====================
+
+[17]
+0x7fff0d3563f0: 7
+[Killing context]
+
+[Dead context]
+====================
+
+[18]
+0x7fff0d356328: 6
+[Killing context]
+
+[Dead context]
+====================
+
+[19]
+0x7fff0d3564b0: 6
+[Killing context]
+
+[Dead context]
+====================
+
+[20]
+0x7fff0d356260: 5
+[Killing context]
+
+[Dead context]
+====================
+
+[21]
+0x7fff0d356280: 5
+[Killing context]
+
+[Dead context]
+====================
+
+[22]
+0x7fff0d356418: 5
+[Killing context]
+
+[Dead context]
+====================
+
+[23]
+0x7fff0d356448: 5
+[Killing context]
+
+[Dead context]
+====================
+
+[24]
+0x7fff0d3565d0: 5
+[Killing context]
+
+[Dead context]
+====================
+
+[25]
+0x7fff0d3566b0: 5
+[Killing context]
+
+[Dead context]
+====================
+
+[26]
+0x7fff0d35644c: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[27]
+0x7fff0d355e58: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[28]
+0x7fff0d3561d0: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[29]
+0x7fff0d356218: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[30]
+0x7fff0d356300: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[31]
+0x7fff0d356310: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[32]
+0x7fff0d3564c0: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[33]
+0x7fff0d3564d0: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[34]
+0x7fff0d3565d8: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[35]
+0x7fff0d3565e8: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[36]
+0x7fff0d3565f8: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[37]
+0x7fff0d356738: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[38]
+0x7fff0d35643c: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[39]
+0x7fff0d356440: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[40]
+0x7fff0d35624c: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[41]
+0x7fff0d355d98: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[42]
+0x7fff0d355e50: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[43]
+0x7fff0d355e60: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[44]
+0x7fff0d355ee8: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[45]
+0x7fff0d3561e8: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[46]
+0x7fff0d356220: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[47]
+0x7fff0d356228: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[48]
+0x7fff0d356238: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[49]
+0x7fff0d3562e8: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[50]
+0x7fff0d3563b0: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[51]
+0x7fff0d3563b4: 3
+[Killing context]
+
+[Dead context]
+================main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_vdso_vsym(34):"(0x00007fbeb41de623)mov    qword ptr [rsp+0x20], 0x00000000"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+time_ifunc(43):"(0x00007fbeb4149a51)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86/time.c]
+_dl_relocate_object(577):"(0x00007fbf8244dbc1)call   rax"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(143):"(0x00007fbf82452aa1)mov    qword ptr [rsp+0x30], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(121):"(0x00007fbf8244d9da)mov    qword ptr [rbp-0xb0], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/do-rel.h]
+dl_main(2251):"(0x00007fbf824454b1)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(83):"(0x00007fbf8244d98c)mov    qword ptr [rbp-0xa8], rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/do-rel.h]
+dl_main(2251):"(0x00007fbf824454b1)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+memset(265):"(0x00007fbf82460b26)mov    word ptr [rdi], cx"[../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S]
+_dl_sort_maps(118):"(0x00007fbf82458ea6)call   0x00007fbf82460a50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-sort-maps.c]
+_dl_fini(94):"(0x00007fbf82451b24)call   0x00007fbf82458cd0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(356):"(0x00007fbf8244b2f3)mov    dword ptr [rsp+0x58], eax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_vdso_vsym(39):"(0x00007fbeb41de64e)call   qword ptr [rax+0x00000178]"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(38):"(0x00007fbeb40989e1)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_lookup_symbol_x(804):"(0x00007fbf8244c1b1)mov    qword ptr [rsp+0x28], 0x00000000"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_vdso_vsym(39):"(0x00007fbeb41de64e)call   qword ptr [rax+0x00000178]"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(38):"(0x00007fbeb40989e1)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(109):"(0x00007fbf82451b48)mov    qword ptr [rbp-0x48], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+handle_intel.constprop.1(259):"(0x00007fbeb4132ef8)push   rbp"[../sysdeps/x86/cacheinfo.c]
+init_cacheinfo(504):"(0x00007fbeb4098578)call   0x00007fbeb4132ef0"[../sysdeps/x86/cacheinfo.c]
+_dl_init(72):"(0x00007fbf82451780)call   qword ptr [r14]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_vdso_vsym(34):"(0x00007fbeb41de640)movaps oword ptr [rsp+0x10], xmm0"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(38):"(0x00007fbeb40989e1)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__GI___tunable_get_val(377):"(0x00007fbf8245a2b0)mov    qword ptr [rsi], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-tunables.c]
+_dl_sysdep_start(384):"(0x00007fbf8245bd4f)call   0x00007fbf8245a280"[../sysdeps/x86/cpu-features.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+get_common_indeces.constprop.1(48):"(0x00007fbf8245b6e9)mov    dword ptr [r9], edx"[../sysdeps/x86/cpu-features.c]
+_dl_sysdep_start(205):"(0x00007fbf8245bfb7)call   0x00007fbf8245b690"[../sysdeps/x86/cpu-features.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+handle_intel.constprop.1(259):"(0x00007fbeb4132ef4)push   r13"[../sysdeps/x86/cacheinfo.c]
+init_cacheinfo(504):"(0x00007fbeb4098578)call   0x00007fbeb4132ef0"[../sysdeps/x86/cacheinfo.c]
+_dl_init(72):"(0x00007fbf82451780)call   qword ptr [r14]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_vdso_vsym(34):"(0x00007fbeb41de623)mov    qword ptr [rsp+0x20], 0x00000000"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(38):"(0x00007fbeb40989e1)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(60):"(0x00007fbf82451a7e)mov    dword ptr [rbp-0x3c], esi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(137):"(0x00007fbf82451bb3)mov    qword ptr [rbp-0x38], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sort_maps(35):"(0x00007fbf82458d57)mov    dword ptr [rbp-0x74], ecx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-sort-maps.c]
+_dl_fini(94):"(0x00007fbf82451b24)call   0x00007fbf82458cd0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(10):"(0x00007fbf7e469774)mov    dword ptr [rax+rdx*4], ecx"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2080):"(0x00007fbf82449e68)mov    dword ptr [rsp+0x0c], ecx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_catch_exception(197):"(0x00007fbf8245ccb0)mov    <rel> qword ptr [0x00007fbf8266a0e8], rcx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_catch_exception(191):"(0x00007fbf8245cc6a)mov    <rel> qword ptr [0x00007fbf8266a0e8], rdi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__GI___cxa_atexit(54):"(0x00007fbeb40ba557)mov    qword ptr [rax], 0x00000004"[/build/glibc-2ORdQG/glibc-2.27/stdlib/cxa_atexit.c]
+__libc_start_main(240):"(0x00007fbeb4098af7)call   0x00007fbeb40ba4e0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+memset(201):"(0x00007fbf82460ade)movdqa oword ptr [rcx+0x10], xmm0"[../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S]
+_dl_map_object_from_fd(131):"(0x00007fbf82447edf)call   0x00007fbf82460a50"[./dl-map-segments.h]
+_dl_map_object(2389):"(0x00007fbf8244a047)call   0x00007fbf82447820"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_new_object(155):"(0x00007fbf8244d2c3)mov    qword ptr [rsp+0x08], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007fbf824479c0)call   0x00007fbf8244d0e0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007fbf8244a047)call   0x00007fbf82447820"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_new_object(59):"(0x00007fbf8244d102)mov    dword ptr [rsp+0x2c], r8d"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007fbf824479c0)call   0x00007fbf8244d0e0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007fbf8244a047)call   0x00007fbf82447820"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object_from_fd(876):"(0x00007fbf82447969)mov    dword ptr [rbp-0xd0], eax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007fbf8244a047)call   0x00007fbf82447820"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__open(36):"(0x00007fbf8245dce3)mov    qword ptr [rsp-0x20], rdx"[../sysdeps/unix/sysv/linux/open64.c]
+open_verify.constprop.7(1668):"(0x00007fbf82446c22)call   0x00007fbf8245dce0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2292):"(0x00007fbf8244a419)call   0x00007fbf82446be0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2389):"(0x00007fbf8244a032)push   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2080):"(0x00007fbf82449e68)mov    dword ptr [rsp+0x0c], ecx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2175):"(0x00007fbf8244a177)mov    qword ptr [rsp+0x18], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2196):"(0x00007fbf8244a679)mov    qword ptr [rsp+0x30], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2196):"(0x00007fbf8244a683)mov    qword ptr [rsp+0x38], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2388):"(0x00007fbf8244a027)mov    qword ptr [rsp+0x68], rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__sigsetjmp(44):"(0x00007fbf8245e0e1)mov    qword ptr [rdi+0x28], r15"[../sysdeps/x86_64/setjmp.S]
+_dl_catch_exception(194):"(0x00007fbf8245cc84)call   0x00007fbf8245e0c0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(8):"(0x00007fbf7e46973b)mov    dword ptr [rax+rdx*4], 0x00000001"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+main(6):"(0x00007fbf7e469712)mov    dword ptr [rax+rdx*4], 0x00000000"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+====
+
+[52]
+0x7fff0d3563c0: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[53]
+0x7fff0d356400: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[54]
+0x7fff0d356420: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[55]
+0x7fff0d356468: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[56]
+0x7fff0d356470: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[57]
+0x7fff0d356478: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[58]
+0x7fff0d3564d8: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[59]
+0x7fff0d3565b4: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[60]
+0x7fff0d3565c8: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[61]
+0x7fff0d356698: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[62]
+0x7fff0d3566a8: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[63]
+0x7fff0d3566c0: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[64]
+0x7fff0d356760: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[65]
+0x7fff0d356768: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[66]
+0x7fff0d356770: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[67]
+0x7fff0d3566b4: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[68]
+0x7fff0d3566b8: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[69]
+0x7fff0d3565ec: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[70]
+0x7fff0d355d9c: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[71]
+0x7fbf8266a0e8: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[72]
+0x7fbeb4463d90: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[73]
+0x7fff0d355ce8: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[74]
+0x7fff0d355d0c: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[75]
+0x7fff0d355d48: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[76]
+0x7fff0d355d60: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[77]
+0x7fff0d355dc0: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[78]
+0x7fff0d355e18: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[79]
+0x7fff0d355eb0: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[80]
+0x7fff0d355ecc: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[81]
+0x7fff0d355ed8: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[82]
+0x7fff0d355ef0: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[83]
+0x7fff0d355ef8: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[84]
+0x7fff0d355f20: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[85]
+0x7fff0d355f28: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[86]
+0x7fff0d3561d8: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[87]
+0x7fff0d3561e0: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[88]
+0x7fff0d3561f0: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[89]
+0x7fff0d3561f8: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[90]
+0x7fff0d356200: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[91]
+0x7fff0d356208: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[92]
+0x7fff0d356210: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[93]
+0x7fff0d356268: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[94]
+0x7fff0d3562c8: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[95]
+0x7fff0d356308: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[96]
+0x7fff0d356318: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[97]
+0x7fff0d356320: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[98]
+0x7fff0d356330: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[99]
+0x7fff0d356338: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[100]
+0x7fff0d356340: 2
+[Killing context]
+
+[Dead context]
+====================
+
+main(10):"(0x00007fbf7e46976e)mov    edx, dword ptr [rbp-0x34]"[./test_apps/src/test_app_dead_writes.cpp]
+__libc_start_main(310):"(0x00007fbeb4098b95)call   rax"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_start(313):"(0x00007fbf82443259)movzx  edx, byte ptr [r15+0x04]"[../sysdeps/x86_64/dl-machine.h]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__run_exit_handlers(120):"(0x00007fbeb40ba100)mov    rax, qword ptr [r15]"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_start(48):"(0x00007fbf82442ebf)mov    rax, <rel> qword ptr [0x00007fbf82668e68]"[/build/glibc-2ORdQG/glibc-2.27/elf/get-dynamic-info.h]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_IO_cleanup(850):"(0x00007fbeb4106505)mov    eax, <rel> dword ptr [0x00007fbeb44648a4]"[/build/glibc-2ORdQG/glibc-2.27/libio/genops.c]
+__run_exit_handlers(130):"(0x00007fbeb40ba1b0)call   qword ptr [rbx]"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__GI___tunables_init(120):"(0x00007fbf82459da2)movzx  eax, byte ptr [rbx]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-tunables.h]
+_dl_sysdep_start(224):"(0x00007fbf8245bc95)call   0x00007fbf82459c80"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_IO_cleanup(933):"(0x00007fbeb41066d6)mov    rcx, qword ptr [rsp+0x38]"[/build/glibc-2ORdQG/glibc-2.27/libio/genops.c]
+__run_exit_handlers(130):"(0x00007fbeb40ba1b0)call   qword ptr [rbx]"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_start(132):"(0x00007fbf8244303c)mov    rcx, <rel> qword ptr [0x00007fbf82669a78]"[/build/glibc-2ORdQG/glibc-2.27/elf/get-dynamic-info.h]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__GI__dl_allocate_tls_init(448):"(0x00007fbf824541d3)mov    r9, <rel> qword ptr [0x00007fbf82669f80]"[../elf/dl-tls.c]
+dl_main(2219):"(0x00007fbf824453e5)call   0x00007fbf824541b0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_start(505):"(0x00007fbf824431ad)mov    r9, qword ptr [r8+0x08]"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(121):"(0x00007fbf8244bfb1)mov    ecx, dword ptr [rsp+0x40]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_vdso_vsym(39):"(0x00007fbeb41de64e)call   qword ptr [rax+0x00000178]"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(44):"(0x00007fbeb4098a12)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+memmove(274):"(0x00007fbf824608a1)movzx  ecx, byte ptr [rsi]"[../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S]
+_dl_new_object(85):"(0x00007fbf8244d193)call   0x00007fbf82460870"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007fbf82443ee2)call   0x00007fbf8244d0e0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(149):"(0x00007fbf82451bea)mov    esi, <rel> dword ptr [0x00007fbf82668910]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_setup_hash(948):"(0x00007fbf8244cfbb)mov    esi, dword ptr [rcx+0x04]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_start(393):"(0x00007fbf824430c3)call   0x00007fbf8244cfa0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_vdso_vsym(26):"(0x00007fbeb41de60e)mov    rsi, qword ptr [rax+0x00000158]"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(44):"(0x00007fbeb4098a12)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+dl_main(102):"(0x00007fbf824444b6)mov    rsi, qword ptr [rbx+0x58]"[/build/glibc-2ORdQG/glibc-2.27/elf/get-dynamic-info.h]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__run_exit_handlers(59):"(0x00007fbeb40b9fe2)mov    r15, qword ptr [r12]"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sysdep_start(120):"(0x00007fbf8245b9a1)mov    r15, <rel> qword ptr [0x00007fbf82668778]"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__run_exit_handlers(108):"(0x00007fbeb40ba0eb)mov    rdi, qword ptr [rax+0x20]"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_start(505):"(0x00007fbf82443169)mov    rdi, qword ptr [rax+0x08]"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+memmove(140):"(0x00007fbf82460882)movups xmm1, oword ptr [rsi+rdx-0x10]"[../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S]
+__GI__dl_allocate_tls_init(507):"(0x00007fbf824542f2)call   0x00007fbf82460860"[../elf/dl-tls.c]
+dl_main(2219):"(0x00007fbf824453e5)call   0x00007fbf824541b0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+strcmp(1323):"(0x00007fbf8245eec8)movdqa xmm1, oword ptr [rsi]"[../sysdeps/x86_64/strcmp.S]
+dl_main(1271):"(0x00007fbf824440cc)call   0x00007fbf8245e390"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(184):"(0x00007fbf82451c46)pop    rbx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__GI___tunables_init(68):"(0x00007fbf82459cdd)mov    rbx, qword ptr [r15]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-tunables.c]
+_dl_sysdep_start(224):"(0x00007fbf8245bc95)call   0x00007fbf82459c80"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_IO_flush_all_lockp(755):"(0x00007fbeb41061a7)mov    rdx, qword ptr [fs:0x10]"[/build/glibc-2ORdQG/glibc-2.27/libio/genops.c]
+_IO_cleanup(921):"(0x00007fbeb4106470)call   0x00007fbeb4106150"[/build/glibc-2ORdQG/glibc-2.27/libio/genops.c]
+__run_exit_handlers(130):"(0x00007fbeb40ba1b0)call   qword ptr [rbx]"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_start(119):"(0x00007fbf82443019)mov    rdx, <rel> qword ptr [0x00007fbf82669ad0]"[/build/glibc-2ORdQG/glibc-2.27/elf/get-dynamic-info.h]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(184):"(0x00007fbf82451c4f)pop    rbp"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_important_hwcaps(329):"(0x00007fbf8245094c)pop    rbp"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-hwcaps.c]
+_dl_init_paths(636):"(0x00007fbf82449ac1)call   0x00007fbf82450670"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007fbf82444c41)call   0x00007fbf82449a90"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(184):"(0x00007fbf82451c47)pop    r12"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_new_object(227):"(0x00007fbf8244d342)pop    r12"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(32):"(0x00007fbf82444308)call   0x00007fbf8244d0e0"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c22b)mov    r8, qword ptr [rsp+0x48]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_vdso_vsym(39):"(0x00007fbeb41de64e)call   qword ptr [rax+0x00000178]"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(44):"(0x00007fbeb4098a12)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_start(505):"(0x00007fbf82443174)mov    r8, <rel> qword ptr [0x00007fbf82669b70]"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(452):"(0x00007fbf8244b874)mov    r10, qword ptr [rsp+0x80]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_vdso_vsym(39):"(0x00007fbeb41de64e)call   qword ptr [rax+0x00000178]"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(38):"(0x00007fbeb40989e1)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_new_object(85):"(0x00007fbf8244d162)mov    r10, qword ptr [rsp+0x20]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007fbf82443ee2)call   0x00007fbf8244d0e0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_init(125):"(0x00007fbf824517a3)pop    r14"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_important_hwcaps(275):"(0x00007fbf82450bb0)mov    r14, qword ptr [rbp-0x68]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-hwcaps.c]
+_dl_init_paths(636):"(0x00007fbf82449ac1)call   0x00007fbf82450670"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007fbf82444c41)call   0x00007fbf82449a90"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(184):"(0x00007fbf82451c49)pop    r13"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__mmap(54):"(0x00007fbf8245df7f)pop    r13"[../sysdeps/unix/sysv/linux/mmap64.c]
+_dl_sysdep_read_whole_file(57):"(0x00007fbf82452540)call   0x00007fbf8245df30"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-misc.c]
+_dl_load_cache_lookup(201):"(0x00007fbf824593c3)call   0x00007fbf824524c0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-cache.c]
+_dl_map_object(2255):"(0x00007fbf8244a3ce)call   0x00007fbf824590b0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(522):"(0x00007fbf8244b6a0)movhps xmm0, qword ptr [rsp]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_vdso_vsym(39):"(0x00007fbeb41de64e)call   qword ptr [rax+0x00000178]"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(44):"(0x00007fbeb4098a12)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+index(32):"(0x00007fbf82460123)movdqu xmm0, oword ptr [rdi]"[../sysdeps/x86_64/multiarch/../strchr.S]
+_dl_map_object_deps(245):"(0x00007fbf8244f63f)call   0x00007fbf82460100"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(356):"(0x00007fbf8244b2cf)mov    r14d, dword ptr [rsp+0xf0]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_vdso_vsym(39):"(0x00007fbeb41de64e)call   qword ptr [rax+0x00000178]"[../sysdeps/unix/sysv/linux/dl-vdso.c]
+_init(44):"(0x00007fbeb4098a12)call   0x00007fbeb41de5f0"[../sysdeps/unix/sysv/linux/x86_64/init-first.c]
+_dl_init(58):"(0x00007fbf8245173a)call   rax"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-init.c]
+_dl_start_user(746):"(0x00007fbf824420c5)call   0x00007fbf82451680"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(452):"(0x00007fbf8244b862)mov    r14d, dword ptr [rsp+0x48]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_relocate_object(308):"(0x00007fbf8244db44)call   0x00007fbf8244c100"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+strcmp(176):"(0x00007fbf8245e3b3)movhpd xmm2, qword ptr [rsi+0x08]"[../sysdeps/x86_64/strcmp.S]
+_dl_load_cache_lookup(42):"(0x00007fbf82459148)call   0x00007fbf8245e390"[../sysdeps/x86/dl-procinfo.h]
+_dl_map_object(2255):"(0x00007fbf8244a3ce)call   0x00007fbf824590b0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+strcmp(1322):"(0x00007fbf8245eec4)movdqa xmm2, oword ptr [rdi]"[../sysdeps/x86_64/strcmp.S]
+dl_main(1271):"(0x00007fbf824440cc)call   0x00007fbf8245e390"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(342):"(0x00007fbf82452fa1)mov    edi, dword ptr [rdx+0x08]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+dl_main(2471):"(0x00007fbf82443692)mov    edi, <rel> dword ptr [0x00007fbf82668e60]"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object_deps(456):"(0x00007fbf8244fe60)mov    r8d, dword ptr [rax]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__GI___tunable_get_val(373):"(0x00007fbf8245a298)mov    r8d, dword ptr [rax+0x08]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-tunables.c]
+_dl_sysdep_start(382):"(0x00007fbf8245bd40)call   0x00007fbf8245a280"[../sysdeps/x86/cpu-features.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+do_lookup_x(338):"(0x00007fbf8244b2bd)mov    r11, qword ptr [rsp+0xd0]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_lookup_symbol_x(813):"(0x00007fbf8244c23a)call   0x00007fbf8244b290"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-lookup.c]
+_dl_relocate_object(308):"(0x00007fbf8244db44)call   0x00007fbf8244c100"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_relocate_object(308):"(0x00007fbf8244ec4b)mov    r11, qword ptr [r14+0x00000408]"[../sysdeps/x86_64/dl-machine.h]
+dl_main(2190):"(0x00007fbf82445322)call   0x00007fbf8244d7a0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(218):"(0x00007fbf82452abd)mov    r13d, dword ptr [rbx]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_new_object(66):"(0x00007fbf8244d111)mov    r13d, <rel> dword ptr [0x00007fbf82668910]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007fbf82443ee2)call   0x00007fbf8244d0e0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_fini(109):"(0x00007fbf82451c0e)mov    rsp, qword ptr [rbp-0x50]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-fini.c]
+__run_exit_handlers(108):"(0x00007fbeb40ba0ef)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__GI_exit(139):"(0x00007fbeb40ba1e5)call   0x00007fbeb40b9f80"[/build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c]
+__libc_start_main(344):"(0x00007fbeb4098b99)call   0x00007fbeb40ba1d0"[../csu/libc-start.c]
+_start(0):"(0x00007fbf7e469584)call   <rel> qword ptr [0x00007fbf7e669fe0]"[]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+__mmap(54):"(0x00007fbf8245df85)ret"[../sysdeps/unix/sysv/linux/mmap64.c]
+_dl_map_object_from_fd(141):"(0x00007fbf82447f26)call   0x00007fbf8245df30"[./dl-map-segments.h]
+_dl_map_object(2389):"(0x00007fbf8244a047)call   0x00007fbf82447820"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(214):"(0x00007fbf82452a93)mov    ebx, dword ptr [rax+0x08]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sysdep_start(89):"(0x00007fbf8245b9f4)movzx  ebx, <rel> word ptr [0x00007fbf826687b0]"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(220):"(0x00007fbf82452ab4)mov    r12d, dword ptr [rbx+0x08]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(220):"(0x00007fbf82452ab4)mov    r12d, dword ptr [rbx+0x08]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_load_cache_lookup(285):"(0x00007fbf824592b5)mov    r15d, dword ptr [rbp-0x58]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-cache.c]
+_dl_map_object(2255):"(0x00007fbf8244a3ce)call   0x00007fbf824590b0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2125):"(0x00007fbf82449f60)mov    r15d, <rel> dword ptr [0x00007fbf82668760]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_check_map_versions(304):"(0x00007fbf82452f43)mov    r9d, dword ptr [rcx]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007fbf82453169)call   0x00007fbf824529a0"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007fbf82442e73)call   0x00007fbf82453120"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007fbf8245cd69)call   rsi"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007fbf82444ffe)call   0x00007fbf8245cd40"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_map_object(2251):"(0x00007fbf8244a3bf)mov    r9d, <rel> dword ptr [0x00007fbf82668780]"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007fbf8244f35d)call   0x00007fbf82449e50"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007fbf8245cc99)call   rdx"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007fbf8244f663)call   0x00007fbf82441e90"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007fbf82444ec1)call   0x00007fbf8244f460"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007fbf8245bdfd)call   r13"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sysdep_start(153):"(0x00007fbf8245bb70)mov    r11d, dword ptr [rdx+0x08]"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+_dl_sysdep_start(119):"(0x00007fbf8245b993)mov    r11d, <rel> dword ptr [0x00007fbf82668e60]"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007fbf82443123)call   0x00007fbf8245b910"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007fbf82442093)call   0x00007fbf82442ea0"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+PROCESS[91099]_ROOT_CTXT(0):"(0x0000000000000000) "[ ]
+==================== REG DEAD WRITES ====================
+[1]
+ebx: 403735
+[Killing context]
+
+[Dead context]
+====================
+
+[2]
+rcx: 401827
+[Killing context]
+
+[Dead context]
+====================
+
+[3]
+ecx: 101597
+[Killing context]
+
+[Dead context]
+====================
+
+[4]
+rdx: 1519
+[Killing context]
+
+[Dead context]
+====================
+
+[5]
+r10: 903
+[Killing context]
+
+[Dead context]
+====================
+
+[6]
+edx: 641
+[Killing context]
+
+[Dead context]
+====================
+
+[7]
+edi: 592
+[Killing context]
+
+[Dead context]
+====================
+
+[8]
+rdi: 475
+[Killing context]
+
+[Dead context]
+====================
+
+[9]
+eax: 430
+[Killing context]
+
+[Dead context]
+====================
+
+[10]
+r8: 426
+[Killing context]
+
+[Dead context]
+====================
+
+[11]
+xmm2: 279
+[Killing context]
+
+[Dead context]
+====================
+
+[12]
+rsp: 253
+[Killing context]
+
+[Dead context]
+====================
+
+[13]
+rbx: 246
+[Killing context]
+
+[Dead context]
+====================
+
+[14]
+rsi: 207
+[Killing context]
+
+[Dead context]
+====================
+
+[15]
+r13: 207
+[Killing context]
+
+[Dead context]
+====================
+
+[16]
+r9: 195
+[Killing context]
+
+[Dead context]
+====================
+
+[17]
+r11: 185
+[Killing context]
+
+[Dead context]
+====================
+
+[18]
+r15: 121
+[Killing context]
+
+[Dead context]
+====================
+
+[19]
+r14: 119
+[Killing context]
+
+[Dead context]
+====================
+
+[20]
+xmm1: 93
+[Killing context]
+
+[Dead context]
+====================
+
+[21]
+r15d: 87
+[Killing context]
+
+[Dead context]
+====================
+
+[22]
+xmm3: 20
+[Killing context]
+
+[Dead context]
+====================
+
+[23]
+r8d: 9
+[Killing context]
+
+[Dead context]
+====================
+
+[24]
+r9d: 8
+[Killing context]
+
+[Dead context]
+====================
+
+[25]
+r12: 5
+[Killing context]
+
+[Dead context]
+====================
+
+[26]
+r14d: 5
+[Killing context]
+
+[Dead context]
+====================
+
+[27]
+rbp: 4
+[Killing context]
+
+[Dead context]
+====================
+
+[28]
+esp: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[29]
+r13d: 3
+[Killing context]
+
+[Dead context]
+====================
+
+[30]
+ax: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[31]
+r10d: 2
+[Killing context]
+
+[Dead context]
+====================
+
+[32]
+r12d: 1
+[Killing context]
+
+[Dead context]
+====================
+

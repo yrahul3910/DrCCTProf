@@ -24,6 +24,7 @@
 #define DRCCTLIB_EXIT_PROCESS(format, args...)                                           \
     DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_footprint", format, \
                                           ##args)
+#define STDOUT_FP 1
 
 /**
  * Dear beloved TA.
@@ -310,11 +311,29 @@ static uint tls_offs;
 #    define OPND_CREATE_CCT_INT OPND_CREATE_INT32
 #endif
 
-using MAP_TYPE = std::map<app_pc, int>;
+struct dead_write_t {
+	context_handle_t dead_ctxt;
+	context_handle_t killing_ctxt;
+	int count;
+};
+
+bool operator<(const dead_write_t& left, const dead_write_t& right) {
+	return left.count < right.count;
+}
+
+bool operator<=(const dead_write_t& left, const dead_write_t& right) {
+	return left.count <= right.count;
+}
+
+bool operator==(const dead_write_t& left, const dead_write_t& right) {
+	return left.count == right.count;
+}
+
+using MAP_TYPE = std::map<app_pc, dead_write_t>;
 MAP_TYPE mem_writes;
 MAP_TYPE mem_stats;
 
-using REG_MAP_T = std::map<int, int>;
+using REG_MAP_T = std::map<int, dead_write_t>;
 REG_MAP_T reg_writes;
 REG_MAP_T reg_stats;
 
@@ -334,32 +353,34 @@ typedef int instr_type;
 
 #define TLS_MEM_REF_BUFF_SIZE 100
 
-// client want to do
-void
-DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t *ref)
-{
-    // add online analysis here
-	 
-}
-
 void
 InsertRegCleanCall(int slot, instr_t* instr, instr_type type, int reg)
 {
 	void *drcontext = dr_get_current_drcontext();
+	context_handle_t cur_ctxt = drcctlib_get_context_handle(drcontext, slot);
 
 	if (type == INSTR_WRITE) {
 		if (reg_writes.find(reg) != reg_writes.end()) {
 			// Dead write
-			reg_writes[reg]++;
+			reg_writes[reg].killing_ctxt = cur_ctxt;
+			reg_writes[reg].count--;
 		} else {
-			reg_writes[reg] = 0;
+			reg_writes[reg].dead_ctxt = cur_ctxt;
+			reg_writes[reg].count = 0;
 		}
 	} else if (type == INSTR_READ) {
 		REG_MAP_T::iterator it;	
 		if ((it = reg_writes.find(reg)) != reg_writes.end()) {
-			int count = reg_writes[reg];
+			int count = reg_writes[reg].count;
+
+			if (count < 0) {
+				reg_stats[reg].count += count;
+				reg_stats[reg].killing_ctxt = reg_writes[reg].killing_ctxt;
+
+				reg_stats[reg].dead_ctxt = reg_writes[reg].dead_ctxt;
+			}
+
 			reg_writes.erase(it);
-			reg_stats[reg] += count;
 		}
 	}
 
@@ -369,6 +390,7 @@ void
 InsertMemCleanCall(int slot, instr_t* instr, instr_type type, int num)
 {
     void *drcontext = dr_get_current_drcontext();
+	context_handle_t cur_ctxt = drcctlib_get_context_handle(drcontext, slot);
     per_thread_t *pt = (per_thread_t *)drmgr_get_tls_field(drcontext, tls_idx);
 
 	app_pc addr = (&pt->cur_buf_list[num])->addr;
@@ -376,17 +398,24 @@ InsertMemCleanCall(int slot, instr_t* instr, instr_type type, int num)
 	if (type == INSTR_WRITE) {
 		if (mem_writes.find(addr) != mem_writes.end()) {
 			// Dead write
-			mem_writes[addr]++;
+			mem_writes[addr].count--;
+			mem_writes[addr].killing_ctxt = cur_ctxt;
 		} else {
-			mem_writes[addr] = 0;
+			mem_writes[addr].dead_ctxt = cur_ctxt;
+			mem_writes[addr].count = 0;
 		}
 	} else if (type == INSTR_READ) {
 		MAP_TYPE::iterator it;	
 		if ((it = mem_writes.find(addr)) != mem_writes.end()) {
-			int count = mem_writes[addr];
-			mem_writes.erase(it);
-			mem_stats[addr] += count;
+			int count = mem_writes[addr].count;
 
+			if (count < 0) {
+				mem_stats[addr].count += count;
+				mem_stats[addr].killing_ctxt = mem_writes[addr].killing_ctxt;
+				mem_stats[addr].dead_ctxt = mem_writes[addr].dead_ctxt;
+			}
+
+			mem_writes.erase(it);
 		}
 	}
 
@@ -550,20 +579,53 @@ static void
 ClientExit(void)
 {
     // add output module here
-	std::cout << "Starting output...\n";
+	std::multimap<dead_write_t, app_pc> mem_stats_flipped = flip_map(mem_stats);
 
-	//std::multimap<int, app_pc> stats_flipped = flip_map(mem_stats);
-	std::cout << std::string(10, '=') << " MEMORY DEAD WRITES " << std::string(10, '=') << "\n";
-	for (auto it = mem_stats.begin(); it != mem_stats.end(); ++it) {
-		std::printf("%p: %d\n", it->first, it->second);
+	int total_mem_dead_writes = 0;
+	for (auto it = mem_stats_flipped.begin(); it != mem_stats_flipped.end(); it++)
+		total_mem_dead_writes += it->first.count;
+
+	std::cout << std::string(20, '=') << -total_mem_dead_writes << " MEMORY DEAD WRITES " << std::string(20, '=') << "\n";
+
+	int i = 0;
+	for (auto it = mem_stats_flipped.begin(); 
+			it != mem_stats_flipped.end() && i < 100; 
+			++it, ++i) {
+		std::cout << "[" << i + 1 << "]" << '\n';
+		std::printf("%p: %d\n", it->second, -it->first.count);
+
+		std::cout << "[Killing context]\n";
+		drcctlib_print_full_cct(STDOUT_FP, it->first.killing_ctxt, true, true, 0);
+
+		std::cout << "\n[Dead context]\n";
+		drcctlib_print_full_cct(STDOUT_FP, it->first.dead_ctxt, true, true, 0);
+
+		std::cout << std::string(20, '=') << "\n\n";
 	}
 	std::fflush(stdout);
 	
-	std::cout << std::string(10, '=') << " REG DEAD WRITES " << std::string(10, '=') << "\n";
-	for (auto it = reg_stats.begin(); it != reg_stats.end(); ++it) {
-		std::cout << get_reg_name(it->first) << ": " << it->second << "\n";
+	std::multimap<dead_write_t, int> reg_stats_flipped = flip_map(reg_stats);
+
+	int total_reg_dead_writes = 0;
+	for (auto it = reg_stats_flipped.begin(); it != reg_stats_flipped.end(); it++)
+		total_reg_dead_writes += it->first.count;
+
+	std::cout << std::string(20, '=') << -total_reg_dead_writes << " REG DEAD WRITES " << std::string(20, '=') << "\n";
+
+	i = 0;
+	for (auto it = reg_stats_flipped.begin(); 
+			it != reg_stats_flipped.end() && i < 100; 
+			++it, ++i) {
+		std::cout << '[' << i + 1 << ']' << '\n';
+		std::cout << get_reg_name(it->second) << ": " << -it->first.count << "\n";
+
+		std::cout << "[Killing context]\n";
+		drcctlib_print_full_cct(STDOUT_FP, it->first.killing_ctxt, true, true, 0);
+
+		std::cout << "\n[Dead context]\n";
+		drcctlib_print_full_cct(STDOUT_FP, it->first.dead_ctxt, true, true, 0);
+		std::cout << std::string(20, '=') << "\n\n";
 	}
-	std::cout <<"program end" <<std::endl;
 
 
     drcctlib_exit();
