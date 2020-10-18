@@ -25,6 +25,274 @@
     DRCCTLIB_CLIENT_EXIT_PROCESS_TEMPLATE("memory_footprint", format, \
                                           ##args)
 
+/**
+ * Dear beloved TA.
+ * You must be wondering why there is a long switch-case statement of
+ * 200+ lines. Don't worry, dear TA; for I did not write all of these
+ * lines; instead, like a true data mining researcher, I data mined the
+ * API docs. Don't believe me? Here's how you do it. Inspect element
+ * the table of registers at https://dynamorio.org/dynamorio_docs/dr__ir__opnd_8h.html
+ * Find the table of registers, and add 'id="mytbl"' as an attribute to it.
+ * Then, in the console:
+ *
+ * let tbl = document.getElementById('mytbl');
+ * let tbody = tbl.children[0]
+ *
+ * let regs = []
+ * for (c of tbody) {
+ *     let el = c.children[1];
+ *     if (el)
+ *         regs.push(el.innerText.split('"')[1]);
+ * }
+ *
+ * let code = "switch (reg) {\n";
+ * for (let i = 0; i < regs.length; i++) {
+ *     code += `case ${i}: return "${regs[i]}";\n`;
+ * }
+ * code += "}\n";
+ *
+ * Love,
+ * Rahul
+ */
+std::string get_reg_name(int reg) {
+	switch (reg) {
+	case 0: return "rax";
+	case 1: return "rcx";
+	case 2: return "rdx";
+	case 3: return "rbx";
+	case 4: return "rsp";
+	case 5: return "rbp";
+	case 6: return "rsi";
+	case 7: return "rdi";
+	case 8: return "r8";
+	case 9: return "r9";
+	case 10: return "r10";
+	case 11: return "r11";
+	case 12: return "r12";
+	case 13: return "r13";
+	case 14: return "r14";
+	case 15: return "r15";
+	case 16: return "eax";
+	case 17: return "ecx";
+	case 18: return "edx";
+	case 19: return "ebx";
+	case 20: return "esp";
+	case 21: return "ebp";
+	case 22: return "esi";
+	case 23: return "edi";
+	case 24: return "r8d";
+	case 25: return "r9d";
+	case 26: return "r10d";
+	case 27: return "r11d";
+	case 28: return "r12d";
+	case 29: return "r13d";
+	case 30: return "r14d";
+	case 31: return "r15d";
+	case 32: return "ax";
+	case 33: return "cx";
+	case 34: return "dx";
+	case 35: return "bx";
+	case 36: return "sp";
+	case 37: return "bp";
+	case 38: return "si";
+	case 39: return "di";
+	case 40: return "r8w";
+	case 41: return "r9w";
+	case 42: return "r10w";
+	case 43: return "r11w";
+	case 44: return "r12w";
+	case 45: return "r13w";
+	case 46: return "r14w";
+	case 47: return "r15w";
+	case 48: return "al";
+	case 49: return "cl";
+	case 50: return "dl";
+	case 51: return "bl";
+	case 52: return "ah";
+	case 53: return "ch";
+	case 54: return "dh";
+	case 55: return "bh";
+	case 56: return "r8l";
+	case 57: return "r9l";
+	case 58: return "r10l";
+	case 59: return "r11l";
+	case 60: return "r12l";
+	case 61: return "r13l";
+	case 62: return "r14l";
+	case 63: return "r15l";
+	case 64: return "spl";
+	case 65: return "bpl";
+	case 66: return "sil";
+	case 67: return "dil";
+	case 68: return "mm0";
+	case 69: return "mm1";
+	case 70: return "mm2";
+	case 71: return "mm3";
+	case 72: return "mm4";
+	case 73: return "mm5";
+	case 74: return "mm6";
+	case 75: return "mm7";
+	case 76: return "xmm0";
+	case 77: return "xmm1";
+	case 78: return "xmm2";
+	case 79: return "xmm3";
+	case 80: return "xmm4";
+	case 81: return "xmm5";
+	case 82: return "xmm6";
+	case 83: return "xmm7";
+	case 84: return "xmm8";
+	case 85: return "xmm9";
+	case 86: return "xmm10";
+	case 87: return "xmm11";
+	case 88: return "xmm12";
+	case 89: return "xmm13";
+	case 90: return "xmm14";
+	case 91: return "xmm15";
+	case 92: return "xmm16";
+	case 93: return "xmm17";
+	case 94: return "xmm18";
+	case 95: return "xmm19";
+	case 96: return "xmm20";
+	case 97: return "xmm21";
+	case 98: return "xmm22";
+	case 99: return "xmm23";
+	case 100: return "xmm24";
+	case 101: return "xmm25";
+	case 102: return "xmm26";
+	case 103: return "xmm27";
+	case 104: return "xmm28";
+	case 105: return "xmm29";
+	case 106: return "xmm30";
+	case 107: return "xmm31";
+	case 108: return "st0";
+	case 109: return "st1";
+	case 110: return "st2";
+	case 111: return "st3";
+	case 112: return "st4";
+	case 113: return "st5";
+	case 114: return "st6";
+	case 115: return "st7";
+	case 116: return "es";
+	case 117: return "cs";
+	case 118: return "ss";
+	case 119: return "ds";
+	case 120: return "fs";
+	case 121: return "gs";
+	case 122: return "dr0";
+	case 123: return "dr1";
+	case 124: return "dr2";
+	case 125: return "dr3";
+	case 126: return "dr4";
+	case 127: return "dr5";
+	case 128: return "dr6";
+	case 129: return "dr7";
+	case 130: return "dr8";
+	case 131: return "dr9";
+	case 132: return "dr10";
+	case 133: return "dr11";
+	case 134: return "dr12";
+	case 135: return "dr13";
+	case 136: return "dr14";
+	case 137: return "dr15";
+	case 138: return "cr0";
+	case 139: return "cr1";
+	case 140: return "cr2";
+	case 141: return "cr3";
+	case 142: return "cr4";
+	case 143: return "cr5";
+	case 144: return "cr6";
+	case 145: return "cr7";
+	case 146: return "cr8";
+	case 147: return "cr9";
+	case 148: return "cr10";
+	case 149: return "cr11";
+	case 150: return "cr12";
+	case 151: return "cr13";
+	case 152: return "cr14";
+	case 153: return "cr15";
+	case 154: return "cr15";
+	case 155: return "undefined";
+	case 156: return "ymm0";
+	case 157: return "ymm1";
+	case 158: return "ymm2";
+	case 159: return "ymm3";
+	case 160: return "ymm4";
+	case 161: return "ymm5";
+	case 162: return "ymm6";
+	case 163: return "ymm7";
+	case 164: return "ymm8";
+	case 165: return "ymm9";
+	case 166: return "ymm10";
+	case 167: return "ymm11";
+	case 168: return "ymm12";
+	case 169: return "ymm13";
+	case 170: return "ymm14";
+	case 171: return "ymm15";
+	case 172: return "ymm16";
+	case 173: return "ymm17";
+	case 174: return "ymm18";
+	case 175: return "ymm19";
+	case 176: return "ymm20";
+	case 177: return "ymm21";
+	case 178: return "ymm22";
+	case 179: return "ymm23";
+	case 180: return "ymm24";
+	case 181: return "ymm25";
+	case 182: return "ymm26";
+	case 183: return "ymm27";
+	case 184: return "ymm28";
+	case 185: return "ymm29";
+	case 186: return "ymm30";
+	case 187: return "ymm31";
+	case 188: return "zmm0";
+	case 189: return "zmm1";
+	case 190: return "zmm2";
+	case 191: return "zmm3";
+	case 192: return "zmm4";
+	case 193: return "zmm5";
+	case 194: return "zmm6";
+	case 195: return "zmm7";
+	case 196: return "zmm8";
+	case 197: return "zmm9";
+	case 198: return "zmm10";
+	case 199: return "zmm11";
+	case 200: return "zmm12";
+	case 201: return "zmm13";
+	case 202: return "zmm14";
+	case 203: return "zmm15";
+	case 204: return "zmm16";
+	case 205: return "zmm17";
+	case 206: return "zmm18";
+	case 207: return "zmm19";
+	case 208: return "zmm20";
+	case 209: return "zmm21";
+	case 210: return "zmm22";
+	case 211: return "zmm23";
+	case 212: return "zmm24";
+	case 213: return "zmm25";
+	case 214: return "zmm26";
+	case 215: return "zmm27";
+	case 216: return "zmm28";
+	case 217: return "zmm29";
+	case 218: return "zmm30";
+	case 219: return "zmm31";
+	case 220: return "k0";
+	case 221: return "k1";
+	case 222: return "k2";
+	case 223: return "k3";
+	case 224: return "k4";
+	case 225: return "k5";
+	case 226: return "k6";
+	case 227: return "k7";
+	case 228: return "bnd0";
+	case 229: return "bnd1";
+	case 230: return "bnd2";
+	case 231: return "bnd3";
+}
+    return "";
+}
+
+
 static int tls_idx;
 
 enum {
@@ -45,6 +313,10 @@ static uint tls_offs;
 using MAP_TYPE = std::map<app_pc, int>;
 MAP_TYPE mem_writes;
 MAP_TYPE mem_stats;
+
+using REG_MAP_T = std::map<int, int>;
+REG_MAP_T reg_writes;
+REG_MAP_T reg_stats;
 
 typedef struct _mem_ref_t {
     app_pc addr;
@@ -70,7 +342,28 @@ DoWhatClientWantTodo(void *drcontext, context_handle_t cur_ctxt_hndl, mem_ref_t 
 	 
 }
 
+void
+InsertRegCleanCall(int slot, instr_t* instr, instr_type type, int reg)
+{
+	void *drcontext = dr_get_current_drcontext();
 
+	if (type == INSTR_WRITE) {
+		if (reg_writes.find(reg) != reg_writes.end()) {
+			// Dead write
+			reg_writes[reg]++;
+		} else {
+			reg_writes[reg] = 0;
+		}
+	} else if (type == INSTR_READ) {
+		REG_MAP_T::iterator it;	
+		if ((it = reg_writes.find(reg)) != reg_writes.end()) {
+			int count = reg_writes[reg];
+			reg_writes.erase(it);
+			reg_stats[reg] += count;
+		}
+	}
+
+}
 
 void
 InsertMemCleanCall(int slot, instr_t* instr, instr_type type, int num)
@@ -175,23 +468,35 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
     int num = 0;
     for (int i = 0; i < instr_num_srcs(instr); i++) {
 		// Read
-        if (opnd_is_memory_reference(instr_get_src(instr, i))) {
+		opnd_t op = instr_get_src(instr, i);
+        if (opnd_is_memory_reference(op)) {
             InstrumentMem(drcontext, bb, instr, instr_get_src(instr, i));
 
 			dr_insert_clean_call(drcontext, bb, instr, (void*) InsertMemCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_READ), OPND_CREATE_CCT_INT(num));
 					num++;
         } else {
 			// Reg
+			int reg_count = opnd_num_regs_used(op);
+			for (int j = 0; j < reg_count; j++) {
+				int reg = (int) opnd_get_reg_used(op, j);
+				dr_insert_clean_call(drcontext, bb, instr, (void*) InsertRegCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_READ), OPND_CREATE_CCT_INT(reg));
+			}
 		}
     }
     for (int i = 0; i < instr_num_dsts(instr); i++) {
 		// Write
-        if (opnd_is_memory_reference(instr_get_dst(instr, i))) {
+		opnd_t op = instr_get_dst(instr, i);
+        if (opnd_is_memory_reference(op)) {
             InstrumentMem(drcontext, bb, instr, instr_get_dst(instr, i));
 			dr_insert_clean_call(drcontext, bb, instr, (void*) InsertMemCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_WRITE), OPND_CREATE_CCT_INT(num));
             num++;
         } else {
 			// Reg
+			int reg_count = opnd_num_regs_used(op);
+			for (int j = 0; j < reg_count; ++j) {
+				int reg = (int) opnd_get_reg_used(op, j);
+				dr_insert_clean_call(drcontext, bb, instr, (void*) InsertRegCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_WRITE), OPND_CREATE_CCT_INT(reg));
+			}
 		}
     }
 }
@@ -245,14 +550,19 @@ static void
 ClientExit(void)
 {
     // add output module here
-	std::cout << "Starting output..." << std::endl;
+	std::cout << "Starting output...\n";
 
 	//std::multimap<int, app_pc> stats_flipped = flip_map(mem_stats);
+	std::cout << std::string(10, '=') << " MEMORY DEAD WRITES " << std::string(10, '=') << "\n";
 	for (auto it = mem_stats.begin(); it != mem_stats.end(); ++it) {
 		std::printf("%p: %d\n", it->first, it->second);
 	}
-	
 	std::fflush(stdout);
+	
+	std::cout << std::string(10, '=') << " REG DEAD WRITES " << std::string(10, '=') << "\n";
+	for (auto it = reg_stats.begin(); it != reg_stats.end(); ++it) {
+		std::cout << get_reg_name(it->first) << ": " << it->second << "\n";
+	}
 	std::cout <<"program end" <<std::endl;
 
 
