@@ -1,4 +1,5 @@
-./build/bin64/drrun -t drcctlib_memory_footprint -- ./calculator/test
+Program run: https://github.com/kimwalisch/calculator
+=====
 Correct: 45345 + 0 + 0xdf234 - 1000 % 7                     = 959311    
 Correct: (0 + 0xdf234 - 1000) * 3 / 2 % 999                 = 828       
 Correct: 1 << 16                                            = 65536     
