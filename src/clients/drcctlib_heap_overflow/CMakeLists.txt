@@ -31,6 +31,7 @@ add_library(drcctlib_heap_overflow SHARED
 
 configure_DynamoRIO_client(drcctlib_heap_overflow)
 use_DynamoRIO_extension(drcctlib_heap_overflow drcctlib)
+use_DynamoRIO_extension(drcctlib_heap_overflow drwrap) 
 place_shared_lib_in_lib_dir(drcctlib_heap_overflow)
 
 add_dependencies(drcctlib_heap_overflow api_headers)

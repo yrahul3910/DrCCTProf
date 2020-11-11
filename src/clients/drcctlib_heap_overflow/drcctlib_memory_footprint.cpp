@@ -16,6 +16,7 @@
 #include "dr_api.h"
 #include "drmgr.h"
 #include "drreg.h"
+#include "drwrap.h"
 #include "drutil.h"
 #include "drcctlib.h"
 
@@ -60,6 +61,59 @@ typedef int instr_type;
 #define TLS_MEM_REF_BUFF_SIZE 100
 
 
+#ifdef WINDOWS
+#    define IF_WINDOWS_ELSE(x, y) x
+#else
+#    define IF_WINDOWS_ELSE(x, y) y
+#endif
+
+#ifdef WINDOWS
+#    define DISPLAY_STRING(msg) dr_messagebox(msg)
+#else
+#    define DISPLAY_STRING(msg) dr_printf("%s\n", msg);
+#endif
+#define NULL_TERMINATE(buf) (buf)[(sizeof((buf)) / sizeof((buf)[0])) - 1] = '\0'
+static void
+event_exit(void);
+static void
+wrap_pre(void *wrapcxt, OUT void **user_data);
+static void
+wrap_post(void *wrapcxt, void *user_data);
+
+static size_t max_malloc;
+#ifdef SHOW_RESULTS
+static uint malloc_oom;
+#endif
+static void *max_lock; /* to synch writes to max_malloc */
+
+#define MALLOC_ROUTINE_NAME IF_WINDOWS_ELSE("HeapAlloc", "malloc")
+
+static void
+module_load_event(void *drcontext, const module_data_t *mod, bool loaded)
+{
+    app_pc towrap = (app_pc)dr_get_proc_address(mod->handle, MALLOC_ROUTINE_NAME);
+    if (towrap != NULL) {
+#ifdef SHOW_RESULTS
+        bool ok =
+#endif
+            drwrap_wrap(towrap, wrap_pre, wrap_post);
+#ifdef SHOW_RESULTS
+        if (ok) {
+            dr_fprintf(STDERR, "<wrapped " MALLOC_ROUTINE_NAME " @" PFX "\n", towrap);
+        } else {
+            /* We expect this w/ forwarded exports (e.g., on win7 both
+             * kernel32!HeapAlloc and kernelbase!HeapAlloc forward to
+             * the same routine in ntdll.dll)
+             */
+            dr_fprintf(STDERR,
+                       "<FAILED to wrap " MALLOC_ROUTINE_NAME " @" PFX
+                       ": already wrapped?\n",
+                       towrap);
+        }
+#endif
+    }
+}
+
 void
 InsertMemCleanCall(int slot, instr_t* instr, instr_type type, int num)
 {
@@ -69,8 +123,28 @@ InsertMemCleanCall(int slot, instr_t* instr, instr_type type, int num)
 
 	app_pc addr = (&pt->cur_buf_list[num])->addr;
 
-	if (type == INSTR_READ) {
-		
+	if (type == INSTR_WRITE) {
+		if (mem_writes.find(addr) != mem_writes.end()) {
+			// Dead write
+			mem_writes[addr].count--;
+			mem_writes[addr].killing_ctxt = cur_ctxt;
+		} else {
+			mem_writes[addr].dead_ctxt = cur_ctxt;
+			mem_writes[addr].count = 0;
+		}
+	} else if (type == INSTR_READ) {
+		MAP_TYPE::iterator it;	
+		if ((it = mem_writes.find(addr)) != mem_writes.end()) {
+			int count = mem_writes[addr].count;
+
+			if (count < 0) {
+				mem_stats[addr].count += count;
+				mem_stats[addr].killing_ctxt = mem_writes[addr].killing_ctxt;
+				mem_stats[addr].dead_ctxt = mem_writes[addr].dead_ctxt;
+			}
+
+			mem_writes.erase(it);
+		}
 	}
 
     BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
@@ -157,7 +231,14 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
 
 			dr_insert_clean_call(drcontext, bb, instr, (void*) InsertMemCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_READ), OPND_CREATE_CCT_INT(num));
 					num++;
-        } 
+        } else {
+			// Reg
+			int reg_count = opnd_num_regs_used(op);
+			for (int j = 0; j < reg_count; j++) {
+				int reg = (int) opnd_get_reg_used(op, j);
+				dr_insert_clean_call(drcontext, bb, instr, (void*) InsertRegCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_READ), OPND_CREATE_CCT_INT(reg));
+			}
+		}
     }
     for (int i = 0; i < instr_num_dsts(instr); i++) {
 		// Write
@@ -166,6 +247,13 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
             InstrumentMem(drcontext, bb, instr, instr_get_dst(instr, i));
 			dr_insert_clean_call(drcontext, bb, instr, (void*) InsertMemCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_WRITE), OPND_CREATE_CCT_INT(num));
             num++;
+        } else {
+			// Reg
+			int reg_count = opnd_num_regs_used(op);
+			for (int j = 0; j < reg_count; ++j) {
+				int reg = (int) opnd_get_reg_used(op, j);
+				dr_insert_clean_call(drcontext, bb, instr, (void*) InsertRegCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_WRITE), OPND_CREATE_CCT_INT(reg));
+			}
 		}
     }
 }
@@ -199,14 +287,43 @@ ClientInit(int argc, const char *argv[])
     
 }
 
+
+// from https://github.com/DynamoRIO/dynamorio/blob/master/api/samples/wrap.c
+static void
+wrap_pre(void *wrapcxt, OUT void **user_data)
+{
+    /* malloc(size) or HeapAlloc(heap, flags, size) */
+    size_t sz = (size_t)drwrap_get_arg(wrapcxt, IF_WINDOWS_ELSE(2, 0));
+    /* find the maximum malloc request */
+    if (sz > max_malloc) {
+        dr_mutex_lock(max_lock);
+        if (sz > max_malloc)
+            max_malloc = sz;
+        dr_mutex_unlock(max_lock);
+    }
+    *user_data = (void *)sz;
+}
+
+static void
+wrap_post(void *wrapcxt, void *user_data)
+{
+#ifdef SHOW_RESULTS /* we want determinism in our test suite */
+    size_t sz = (size_t)user_data;
+    /* test out-of-memory by having a random moderately-large alloc fail */
+    if (sz > 1024 && dr_get_random_value(1000) < 10) {
+        bool ok = drwrap_set_retval(wrapcxt, NULL);
+        DR_ASSERT(ok);
+        dr_mutex_lock(max_lock);
+        malloc_oom++;
+        dr_mutex_unlock(max_lock);
+    }
+#endif
+}
+
 static void
 ClientExit(void)
 {
     // add output module here
-
-
-
-    drcctlib_exit();
 
     if (!dr_raw_tls_cfree(tls_offs, INSTRACE_TLS_COUNT)) {
         DRCCTLIB_EXIT_PROCESS(
@@ -225,6 +342,26 @@ ClientExit(void)
     drutil_exit();
 }
 
+static void
+event_exit(void)
+{
+#ifdef SHOW_RESULTS
+    char msg[256];
+    int len;
+    len = dr_snprintf(msg, sizeof(msg) / sizeof(msg[0]),
+                      "<Largest " MALLOC_ROUTINE_NAME
+                      " request: %d>\n<OOM simulations: %d>\n",
+                      max_malloc, malloc_oom);
+    DR_ASSERT(len > 0);
+    NULL_TERMINATE(msg);
+    DISPLAY_STRING(msg);
+#endif /* SHOW_RESULTS */
+
+    dr_mutex_destroy(max_lock);
+    drwrap_exit();
+    drmgr_exit();
+}
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -240,6 +377,11 @@ dr_client_main(client_id_t id, int argc, const char *argv[])
         DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_heap_overflow "
                               "unable to initialize drmgr");
     }
+	drwrap_init();
+	dr_register_exit_event(event_exit);
+	drmgr_register_module_load_event(module_load_event);
+	max_lock = dr_mutex_create();
+
     drreg_options_t ops = { sizeof(ops), 4 /*max slots needed*/, false };
     if (drreg_init(&ops) != DRREG_SUCCESS) {
         DRCCTLIB_EXIT_PROCESS("ERROR: drcctlib_heap_overflow "
