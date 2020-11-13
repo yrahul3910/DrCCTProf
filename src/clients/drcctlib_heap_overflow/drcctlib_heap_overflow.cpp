@@ -27,6 +27,9 @@
                                           ##args)
 #define STDOUT_FP 1
 
+#define SHOW_RESULTS
+#undef SHOW_RESULTS
+
 static int tls_idx;
 
 enum {
@@ -92,7 +95,6 @@ static void
 module_load_event(void *drcontext, const module_data_t *mod, bool loaded)
 {
     app_pc towrap = (app_pc)dr_get_proc_address(mod->handle, MALLOC_ROUTINE_NAME);
-	std::printf("Allocated %p\n", towrap);
     if (towrap != NULL) {
 #ifdef SHOW_RESULTS
         bool ok =
@@ -125,27 +127,7 @@ InsertMemCleanCall(int slot, instr_t* instr, instr_type type, int num)
 	app_pc addr = (&pt->cur_buf_list[num])->addr;
 
 	if (type == INSTR_WRITE) {
-		if (mem_writes.find(addr) != mem_writes.end()) {
-			// Dead write
-			mem_writes[addr].count--;
-			mem_writes[addr].killing_ctxt = cur_ctxt;
-		} else {
-			mem_writes[addr].dead_ctxt = cur_ctxt;
-			mem_writes[addr].count = 0;
-		}
 	} else if (type == INSTR_READ) {
-		MAP_TYPE::iterator it;	
-		if ((it = mem_writes.find(addr)) != mem_writes.end()) {
-			int count = mem_writes[addr].count;
-
-			if (count < 0) {
-				mem_stats[addr].count += count;
-				mem_stats[addr].killing_ctxt = mem_writes[addr].killing_ctxt;
-				mem_stats[addr].dead_ctxt = mem_writes[addr].dead_ctxt;
-			}
-
-			mem_writes.erase(it);
-		}
 	}
 
     BUF_PTR(pt->cur_buf, mem_ref_t, INSTRACE_TLS_OFFS_BUF_PTR) = pt->cur_buf_list;
@@ -232,14 +214,7 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
 
 			dr_insert_clean_call(drcontext, bb, instr, (void*) InsertMemCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_READ), OPND_CREATE_CCT_INT(num));
 					num++;
-        } else {
-			// Reg
-			int reg_count = opnd_num_regs_used(op);
-			for (int j = 0; j < reg_count; j++) {
-				int reg = (int) opnd_get_reg_used(op, j);
-				dr_insert_clean_call(drcontext, bb, instr, (void*) InsertRegCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_READ), OPND_CREATE_CCT_INT(reg));
-			}
-		}
+        } 
     }
     for (int i = 0; i < instr_num_dsts(instr); i++) {
 		// Write
@@ -248,13 +223,6 @@ InstrumentInsCallback(void *drcontext, instr_instrument_msg_t *instrument_msg)
             InstrumentMem(drcontext, bb, instr, instr_get_dst(instr, i));
 			dr_insert_clean_call(drcontext, bb, instr, (void*) InsertMemCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_WRITE), OPND_CREATE_CCT_INT(num));
             num++;
-        } else {
-			// Reg
-			int reg_count = opnd_num_regs_used(op);
-			for (int j = 0; j < reg_count; ++j) {
-				int reg = (int) opnd_get_reg_used(op, j);
-				dr_insert_clean_call(drcontext, bb, instr, (void*) InsertRegCleanCall, false, 4, OPND_CREATE_CCT_INT(slot), opnd_create_instr(instr), OPND_CREATE_CCT_INT(INSTR_WRITE), OPND_CREATE_CCT_INT(reg));
-			}
 		}
     }
 }
@@ -308,16 +276,13 @@ wrap_pre(void *wrapcxt, OUT void **user_data)
 static void
 wrap_post(void *wrapcxt, void *user_data)
 {
-#ifdef SHOW_RESULTS /* we want determinism in our test suite */
+	char* addr = (char*) drwrap_get_retval(wrapcxt);
+	std::printf("addr = %p\n", addr);
     size_t sz = (size_t)user_data;
+	std::printf("size = %lu\n", sz);
     /* test out-of-memory by having a random moderately-large alloc fail */
-    if (sz > 1024 && dr_get_random_value(1000) < 10) {
-        bool ok = drwrap_set_retval(wrapcxt, NULL);
-        DR_ASSERT(ok);
-        dr_mutex_lock(max_lock);
-        malloc_oom++;
-        dr_mutex_unlock(max_lock);
-    }
+#ifdef SHOW_RESULTS /* we want determinism in our test suite */
+
 #endif
 }
 
