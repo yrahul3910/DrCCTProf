@@ -1,0 +1,1301 @@
+Script started on 2020-11-15 18:35:07-0500
+groups: cannot find name for group ID 1102162763
+]0;ryedida@vm16-58: ~/DrCCTProf[01;32mryedida@vm16-58[00m:[01;34m~/DrCCTProf[00m$ exit./build/bin64/drrun -t drcctlib_heap_overflow -- ./ttest_apps/build/test_app1.cpp [1P[1@2
+Bad memory access 0x7f2248932bc0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+dl_main(93):"(0x00007f224870c72c)"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bc8
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+dl_main(93):"(0x00007f224870c72c)"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bc8
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+dl_main(93):"(0x00007f224870c72c)"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bc8
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+dl_main(93):"(0x00007f224870c72c)"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bc8
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+dl_main(93):"(0x00007f224870c72c)"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bc8
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+dl_main(93):"(0x00007f224870c72c)"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bc0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+dl_main(93):"(0x00007f224870c72c)"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bc0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+dl_main(93):"(0x00007f224870c72c)"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bc8
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+dl_main(93):"(0x00007f224870c72c)"[/build/glibc-2ORdQG/glibc-2.27/elf/setup-vdso.h]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932c60
+----------malloc context----------
+_dl_important_hwcaps(230):"(0x00007f2248718b0f)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-hwcaps.c]
+_dl_init_paths(636):"(0x00007f2248711ac1)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932c90
+----------malloc context----------
+_dl_init_paths(640):"(0x00007f2248711ada)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932168
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bb8
+----------malloc context----------
+_dl_important_hwcaps(230):"(0x00007f2248718b0f)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-hwcaps.c]
+_dl_init_paths(636):"(0x00007f2248711ac1)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bb8
+----------malloc context----------
+_dl_important_hwcaps(230):"(0x00007f2248718b0f)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-hwcaps.c]
+_dl_init_paths(636):"(0x00007f2248711ac1)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932df0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+__strdup(42):"(0x00007f2248726355)"[/build/glibc-2ORdQG/glibc-2.27/string/strdup.c]
+_dl_load_cache_lookup(315):"(0x00007f224872171a)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-cache.c]
+_dl_map_object(2255):"(0x00007f22487123ce)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4a0
+----------malloc context----------
+malloc(82):"(0x00007f2248724580)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4c0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4c8
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4c8
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4c0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4c0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4f0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_map_object_deps(438):"(0x00007f2248717855)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bb8
+----------malloc context----------
+_dl_important_hwcaps(230):"(0x00007f2248718b0f)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-hwcaps.c]
+_dl_init_paths(636):"(0x00007f2248711ac1)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bb8
+----------malloc context----------
+_dl_important_hwcaps(230):"(0x00007f2248718b0f)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-hwcaps.c]
+_dl_init_paths(636):"(0x00007f2248711ac1)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd8
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd498
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd499
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bb8
+----------malloc context----------
+_dl_important_hwcaps(230):"(0x00007f2248718b0f)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-hwcaps.c]
+_dl_init_paths(636):"(0x00007f2248711ac1)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932bb8
+----------malloc context----------
+_dl_important_hwcaps(230):"(0x00007f2248718b0f)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-hwcaps.c]
+_dl_init_paths(636):"(0x00007f2248711ac1)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd8
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd498
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd968
+----------malloc context----------
+_dl_check_map_versions(273):"(0x00007f224871aed9)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007f224871b169)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007f224870ae73)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007f2248724d69)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007f224870cffe)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd960
+----------malloc context----------
+_dl_check_map_versions(273):"(0x00007f224871aed9)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007f224871b169)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007f224870ae73)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007f2248724d69)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007f224870cffe)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd968
+----------malloc context----------
+_dl_check_map_versions(273):"(0x00007f224871aed9)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007f224871b169)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007f224870ae73)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007f2248724d69)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007f224870cffe)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd960
+----------malloc context----------
+_dl_check_map_versions(273):"(0x00007f224871aed9)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007f224871b169)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007f224870ae73)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007f2248724d69)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007f224870cffe)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbee00
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_allocate_tls_storage(346):"(0x00007f224871c0f7)"[../elf/dl-tls.c]
+init_tls(730):"(0x00007f2248709fd7)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+dl_main(1801):"(0x00007f224870d01a)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd8
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd498
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd8
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd498
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd8
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd498
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd8
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd498
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd960
+----------malloc context----------
+_dl_check_map_versions(273):"(0x00007f224871aed9)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007f224871b169)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007f224870ae73)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007f2248724d69)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007f224870cffe)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4f0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_map_object_deps(438):"(0x00007f2248717855)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbee00
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_allocate_tls_storage(346):"(0x00007f224871c0f7)"[../elf/dl-tls.c]
+init_tls(730):"(0x00007f2248709fd7)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+dl_main(1801):"(0x00007f224870d01a)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd960
+----------malloc context----------
+_dl_check_map_versions(273):"(0x00007f224871aed9)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007f224871b169)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007f224870ae73)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007f2248724d69)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007f224870cffe)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd960
+----------malloc context----------
+_dl_check_map_versions(273):"(0x00007f224871aed9)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+_dl_check_all_versions(368):"(0x00007f224871b169)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-version.c]
+version_check_doit(623):"(0x00007f224870ae73)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_receive_error(234):"(0x00007f2248724d69)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+dl_main(1789):"(0x00007f224870cffe)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd958
+----------malloc context----------
+init_tls(708):"(0x00007f2248709f3f)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+dl_main(1801):"(0x00007f224870d01a)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd958
+----------malloc context----------
+init_tls(708):"(0x00007f2248709f3f)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+dl_main(1801):"(0x00007f224870d01a)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd958
+----------malloc context----------
+init_tls(708):"(0x00007f2248709f3f)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+dl_main(1801):"(0x00007f224870d01a)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd958
+----------malloc context----------
+init_tls(708):"(0x00007f2248709f3f)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+dl_main(1801):"(0x00007f224870d01a)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4f0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_map_object_deps(438):"(0x00007f2248717855)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd8
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd498
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932708
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(73):"(0x00007f224871514c)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+dl_main(1108):"(0x00007f224870bee2)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd8
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2248932dd0
+----------malloc context----------
+_dl_init_paths(653):"(0x00007f2248711b2b)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+dl_main(1323):"(0x00007f224870cc41)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd498
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f22449343f8
+----------malloc context----------
+main(0):"(0x00007f224473165c)"[]
+__libc_start_main(310):"(0x00007f217a360b95)"[../csu/libc-start.c]
+_start(0):"(0x00007f2244731564)"[../csu/libc-start.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f22449343f8
+----------malloc context----------
+main(0):"(0x00007f224473165c)"[../csu/libc-start.c]
+__libc_start_main(310):"(0x00007f217a360b95)"[../csu/libc-start.c]
+_start(0):"(0x00007f2244731564)"[../csu/libc-start.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f22449343f8
+----------malloc context----------
+main(0):"(0x00007f224473165c)"[../csu/libc-start.c]
+__libc_start_main(310):"(0x00007f217a360b95)"[../csu/libc-start.c]
+_start(0):"(0x00007f2244731564)"[../csu/libc-start.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4c0
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+Bad memory access 0x7f2244dbd4c8
+----------malloc context----------
+malloc(83):"(0x00007f22487245a8)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-minimal.c]
+_dl_new_object(163):"(0x00007f2248715433)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-object.c]
+_dl_map_object_from_fd(943):"(0x00007f224870f9c0)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+_dl_map_object(2389):"(0x00007f2248712047)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-load.c]
+openaux(63):"(0x00007f224871735d)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+_dl_catch_exception(196):"(0x00007f2248724c99)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-error-skeleton.c]
+_dl_map_object_deps(249):"(0x00007f2248717663)"[/build/glibc-2ORdQG/glibc-2.27/elf/dl-deps.c]
+dl_main(1726):"(0x00007f224870cec1)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_dl_sysdep_start(253):"(0x00007f2248723dfd)"[../elf/dl-sysdep.c]
+_dl_start(414):"(0x00007f224870b123)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+_start(746):"(0x00007f224870a093)"[/build/glibc-2ORdQG/glibc-2.27/elf/rtld.c]
+THREAD[0]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+PROCESS[23773]_ROOT_CTXT(0):"(0x0000000000000000)"[ ]
+------------------------------
+]0;ryedida@vm16-58: ~/DrCCTProf[01;32mryedida@vm16-58[00m:[01;34m~/DrCCTProf[00m$ exit
+exit
+
+Script done on 2020-11-15 18:35:17-0500
