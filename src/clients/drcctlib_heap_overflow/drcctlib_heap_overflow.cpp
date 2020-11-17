@@ -97,6 +97,13 @@ wrap_pre(void *wrapcxt, OUT void **user_data);
 static void
 wrap_post(void *wrapcxt, void *user_data);
 
+static void
+free_exit(void);
+static void
+free_pre(void *wrapcxt, OUT void **user_data);
+static void
+free_post(void *wrapcxt, void *user_data);
+
 static size_t max_malloc;
 #ifdef SHOW_RESULTS
 static uint malloc_oom;
@@ -104,6 +111,15 @@ static uint malloc_oom;
 static void *max_lock; /* to synch writes to max_malloc */
 
 #define MALLOC_ROUTINE_NAME IF_WINDOWS_ELSE("HeapAlloc", "malloc")
+
+static void
+free_load_event(void *drcontext, const module_data_t *mod, bool loaded)
+{
+	app_pc towrap = (app_pc)dr_get_proc_address(mod->handle, "free");
+	if (towrap) {
+		bool ok = drwrap_wrap(towrap, free_pre, free_post);
+	}
+}
 
 static void
 module_load_event(void *drcontext, const module_data_t *mod, bool loaded)
@@ -276,6 +292,20 @@ ClientInit(int argc, const char *argv[])
     
 }
 
+static void
+free_pre(void *wrapcxt, OUT void **user_data)
+{
+	app_pc sz = (app_pc) drwrap_get_arg(wrapcxt, 0);
+	for (auto it = addr_range.begin(); it != addr_range.end(); it++) {
+		if (it->second.first == sz) {
+			addr_range.erase(it);
+			break;
+		}
+	}
+}
+
+static void free_post(void *wrapcxt, void *user_data) {}
+
 
 // from https://github.com/DynamoRIO/dynamorio/blob/master/api/samples/wrap.c
 static void
@@ -368,6 +398,7 @@ dr_client_main(client_id_t id, int argc, const char *argv[])
 	drwrap_init();
 	dr_register_exit_event(event_exit);
 	drmgr_register_module_load_event(module_load_event);
+	drmgr_register_module_load_event(free_load_event);
 	max_lock = dr_mutex_create();
 
     drreg_options_t ops = { sizeof(ops), 4 /*max slots needed*/, false };
